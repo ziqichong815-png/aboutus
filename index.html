@@ -1,0 +1,865 @@
+<!doctype html>
+<html lang="zh-Hans">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="color-scheme" content="light">
+<title>MKTG Stories 行销日志 | 数码营销 · 系统化运营 · Campaign 规划</title>
+<meta name="description" content="MKTG Stories 行销日志是一家马来西亚的数码营销公司：内容规划、广告投递、KOC，系统化运营与 Campaign 规划，覆盖小红书、TikTok、LEMON8、Instagram。">
+<link rel="canonical" href="https://aboutus.mktg-stories.com/">
+<link rel="icon" type="image/png" href="favicon.png">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="MKTG Stories 行销日志">
+<meta property="og:title" content="MKTG Stories 行销日志 | 数码营销 · 系统化运营 · Campaign 规划">
+<meta property="og:description" content="MKTG Stories 行销日志是一家马来西亚的数码营销公司：内容规划、广告投递、KOC，系统化运营与 Campaign 规划，覆盖小红书、TikTok、LEMON8、Instagram。">
+<meta property="og:url" content="https://aboutus.mktg-stories.com/">
+<meta property="og:image" content="https://aboutus.mktg-stories.com/og.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@500;600;700;800&family=Noto+Sans+SC:wght@400;500;700;900&display=swap">
+<style>
+/* Layout: bright single-theme page. Peach hero with a drawn creator scene and floating number chips
+   → orange word band → Who We Are (pastel three-beat tagline) → highlighted statement →
+   three service rows, each with its own illustration → platforms → creator network dot grid →
+   systematic operations (capabilities + an example panel) → butter demo CTA → contact.
+   Warm white, peach, butter, mint, sky; orange only as the accent; text in soft brown, not black. */
+:root{
+  --bg:#FFF9F3; --card:#FFFFFF; --peach:#FFE6D5; --butter:#FFF0BE; --mint:#E6F6EE; --sky:#E4F2FF; --pink:#FFE3E9;
+  --ink:#3A2E27; --ink-2:#6A5A50; --muted:#7A6A5F; --line:#F1E2D5; --line-2:#EBD5C3;
+  --brand:#F36130; --brand-ink:#C8421A; --on-brand:#2B1E16; --sun:#FFC83D; --soft-orange:#FFB48F;
+  --r-xl:32px; --r-lg:24px; --r-md:18px; --r-sm:12px;
+  --sh-1:0 1px 2px rgba(120,70,30,.05),0 12px 30px -16px rgba(120,70,30,.25);
+  --sh-2:0 2px 6px rgba(120,70,30,.06),0 28px 50px -24px rgba(120,70,30,.35);
+  --gut:clamp(16px,3.6vw,36px);
+  --f-lat:"Plus Jakarta Sans","Noto Sans SC","PingFang SC","Microsoft YaHei",system-ui,sans-serif;
+  --f-mono:ui-monospace,Menlo,Consolas,monospace;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth;scroll-padding-top:80px}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}*{animation:none!important;transition:none!important}}
+body{margin:0;background:var(--bg);color:var(--ink);font-family:var(--f-lat);font-size:16px;line-height:1.65;-webkit-font-smoothing:antialiased;overflow-x:hidden}
+h1,h2,h3,h4{margin:0;text-wrap:balance;letter-spacing:-.02em;line-height:1.12}
+p{margin:0}
+ul,ol{margin:0;padding:0;list-style:none}
+a{color:inherit}
+button{font:inherit;color:inherit;cursor:pointer}
+:focus-visible{outline:2.5px solid var(--brand);outline-offset:2px;border-radius:8px}
+img,svg{max-width:100%}
+
+/* language switch: Chinese is the default */
+:root[data-lang="en"] .z{display:none!important}
+:root:not([data-lang="en"]) .e{display:none!important}
+
+.page{max-width:1200px;margin:0 auto;padding-inline:var(--gut)}
+.sec{padding-block:clamp(64px,9vw,112px)}
+.eyebrow{font-size:12px;font-weight:800;letter-spacing:.16em;text-transform:uppercase;color:var(--brand-ink)}
+.h2{font-size:clamp(30px,4.6vw,54px);font-weight:800;margin-top:14px;max-width:20em}
+.h2,.hero h1,.cta h2,.state p,.srow .pitch{word-break:keep-all;overflow-wrap:break-word}
+.lead{font-size:clamp(16px,1.7vw,19px);color:var(--ink-2);max-width:40em;margin-top:18px}
+.ico{width:22px;height:22px;flex:none;stroke:currentColor;fill:none;stroke-width:1.9;stroke-linecap:round;stroke-linejoin:round}
+
+/* buttons */
+.btn{display:inline-flex;align-items:center;gap:8px;min-height:48px;padding:0 24px;border-radius:999px;border:0;font-weight:700;font-size:15px;text-decoration:none;white-space:nowrap;transition:transform .15s ease}
+.btn:hover{transform:translateY(-1px)}
+.btn-brand{background:var(--brand);color:var(--on-brand)}
+.btn-white{background:#fff;color:var(--ink);box-shadow:var(--sh-1)}
+.btn-sm{min-height:40px;padding:0 18px;font-size:14px}
+
+/* top bar */
+.bar{position:sticky;top:env(safe-area-inset-top,0px);z-index:30;background:rgba(255,249,243,.9);backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);border-bottom:1px solid var(--line)}
+.bar-in{display:flex;align-items:center;gap:20px;min-height:66px}
+.brand{display:flex;align-items:center;gap:10px;text-decoration:none;min-width:0}
+.brand-mark{display:grid;place-items:center;width:40px;height:40px;border-radius:13px;background:var(--brand);flex:none}
+.brand-mark img{height:27px;width:auto;display:block}
+.brand-name{font-weight:800;font-size:15px;line-height:1.1;white-space:nowrap}
+.brand-name small{display:block;font-weight:500;font-size:11px;color:var(--muted);letter-spacing:.02em}
+.nav{display:flex;gap:2px;margin-left:auto}
+.nav a{padding:8px 12px;border-radius:999px;font-size:14px;font-weight:600;color:var(--ink-2);text-decoration:none}
+.nav a:hover{background:var(--peach);color:var(--ink)}
+.lang{display:inline-flex;padding:3px;border-radius:999px;background:#fff;border:1px solid var(--line-2)}
+.lang button{border:0;background:transparent;padding:5px 11px;border-radius:999px;font-size:13px;font-weight:700;color:var(--muted)}
+.lang button[aria-pressed="true"]{background:var(--brand);color:var(--on-brand)}
+@media (max-width:1000px){.nav{display:none}.lang{margin-left:auto}}
+@media (max-width:480px){.brand-name small{display:none}.bar-in{gap:10px}}
+
+/* hero */
+.hero{background:var(--peach);overflow:hidden}
+.hero-in{display:grid;grid-template-columns:minmax(0,1.05fr) minmax(0,1fr);gap:clamp(24px,5vw,64px);align-items:center;padding-block:clamp(40px,6vw,88px) clamp(36px,5vw,64px)}
+.hero-tag{display:inline-flex;padding:6px 14px;border-radius:999px;background:#fff;font-size:12.5px;font-weight:800;letter-spacing:.08em;color:var(--brand-ink)}
+.hero h1{font-size:clamp(34px,4.6vw,58px);font-weight:800;margin-top:22px;line-height:1.06;max-width:11em}
+.hero h1 em{font-style:normal;color:var(--brand-ink)}
+.hero p.sub{font-size:clamp(16px,1.8vw,19px);margin-top:22px;max-width:34em;color:var(--ink-2)}
+.hero-cta{display:flex;flex-wrap:wrap;gap:12px;margin-top:28px}
+.hero-plat{display:flex;flex-wrap:wrap;gap:8px;margin-top:26px}
+.hero-plat span{padding:5px 13px;border-radius:999px;background:#fff;font-size:13px;font-weight:700;color:var(--ink-2)}
+.hero-art{position:relative}
+.hero-art svg{display:block;width:100%;height:auto}
+.chipf{position:absolute;display:flex;align-items:center;gap:10px;padding:10px 16px;border-radius:18px;background:#fff;box-shadow:var(--sh-2);font-weight:800;line-height:1.1}
+.chipf b{font-size:clamp(20px,2.4vw,28px);letter-spacing:-.03em;color:var(--brand-ink)}
+.chipf span.l{font-size:12px;font-weight:600;color:var(--muted);line-height:1.25}
+.chipf.a{left:0;top:50%}
+.chipf.b{left:38%;top:1%}
+@media (max-width:860px){.hero-in{grid-template-columns:1fr}.hero-art{max-width:520px}}
+
+/* word band (pausable) */
+.marq{position:relative;background:var(--brand);color:#fff;overflow:hidden;white-space:nowrap;padding-block:clamp(8px,1.4vw,16px)}
+.marq-track{display:inline-flex;animation:marq 42s linear infinite;will-change:transform}
+.marq.paused .marq-track{animation-play-state:paused}
+.marq-set{display:inline-block;padding-right:.8em;font-size:clamp(30px,5.4vw,70px);font-weight:800;letter-spacing:-.02em;line-height:1.15}
+.marq-btn{position:absolute;right:var(--gut);bottom:10px;width:32px;height:32px;border-radius:50%;border:0;background:#fff;color:var(--brand-ink);display:grid;place-items:center;z-index:2}
+.marq-btn .ico{width:13px;height:13px;fill:currentColor;stroke:none}
+.marq-btn .play{display:none}
+.marq.paused .marq-btn .play{display:block}
+.marq.paused .marq-btn .pause{display:none}
+@keyframes marq{to{transform:translateX(-50%)}}
+@media (prefers-reduced-motion:reduce){.marq{white-space:normal}.marq-track{display:block}.marq-set+.marq-set{display:none}.marq-btn{display:none}}
+
+/* who we are */
+.who{display:grid;grid-template-columns:minmax(0,.9fr) minmax(0,1.1fr);gap:clamp(32px,6vw,96px);align-items:center}
+.beats{display:grid;gap:12px;justify-items:start}
+.beat{display:inline-block;padding:.04em .4em .08em;border-radius:.55em;font-size:clamp(44px,8vw,96px);font-weight:800;line-height:1.1;letter-spacing:-.03em}
+.beat:nth-child(1){background:var(--peach)}
+.beat:nth-child(2){background:var(--butter);margin-left:clamp(12px,3vw,44px)}
+.beat:nth-child(3){background:var(--sky);margin-left:clamp(24px,6vw,88px)}
+.who .body{display:grid;gap:16px;color:var(--ink-2);max-width:34em}
+.who .body p.big{font-size:clamp(18px,2vw,21px);font-weight:600;color:var(--ink)}
+.principles{margin-top:24px;display:grid;gap:12px}
+.principles li{display:grid;grid-template-columns:auto 1fr;gap:2px 14px;padding:16px 18px;border-radius:var(--r-md);background:#fff;box-shadow:var(--sh-1)}
+.principles .ico-box{grid-row:span 2;display:grid;place-items:center;width:40px;height:40px;border-radius:12px;color:var(--ink)}
+.principles li:nth-child(1) .ico-box{background:var(--peach)}
+.principles li:nth-child(2) .ico-box{background:var(--butter)}
+.principles li:nth-child(3) .ico-box{background:var(--sky)}
+.principles li>b{font-size:15.5px;font-weight:800;color:var(--ink)}
+.principles li>span{font-size:14px;color:var(--ink-2)}
+@media (max-width:880px){.who{grid-template-columns:1fr}}
+
+/* statement */
+.band-butter{background:var(--butter)}
+.state{display:grid;grid-template-columns:minmax(0,1fr) auto;gap:32px;align-items:center}
+.state p{font-size:clamp(25px,3.6vw,46px);font-weight:700;line-height:1.38;letter-spacing:-.02em;color:var(--ink);max-width:25em}
+.state mark{background:var(--brand);color:var(--on-brand);padding:.04em .22em;border-radius:.2em;-webkit-box-decoration-break:clone;box-decoration-break:clone}
+.chev{width:clamp(48px,8vw,100px);height:auto;color:var(--brand);fill:currentColor}
+@media (max-width:760px){.state{grid-template-columns:1fr}.chev{display:none}}
+
+/* services */
+.srows{margin-top:44px;display:grid;gap:clamp(28px,4vw,48px)}
+.srow{display:grid;grid-template-columns:minmax(0,1.05fr) minmax(0,1fr);gap:clamp(20px,4vw,64px);align-items:center;padding:clamp(20px,3vw,36px);border-radius:var(--r-xl);background:#fff;box-shadow:var(--sh-1)}
+.srow.flip .art{order:-1}
+.srow h3{font-size:clamp(34px,5vw,64px);font-weight:800;line-height:1.03;letter-spacing:-.035em}
+.srow .sub{display:block;margin-top:12px;font-size:14.5px;font-weight:700;color:var(--brand-ink)}
+.srow .pitch{margin-top:18px;font-size:clamp(17px,1.8vw,20px);font-weight:700}
+.srow ul{margin-top:16px;display:grid;gap:14px}
+.srow li{display:grid;grid-template-columns:104px minmax(0,1fr);gap:4px 14px}
+.srow li>b{font-size:14.5px;font-weight:800;color:var(--ink)}
+.srow li>span{font-size:14.5px;color:var(--ink-2)}
+.art{border-radius:var(--r-lg);padding:clamp(10px,2vw,22px);display:grid;place-items:center}
+.art svg{display:block;width:100%;height:auto}
+.art.peach{background:var(--peach)}
+.art.sky{background:var(--sky)}
+.art.butter{background:var(--butter)}
+@media (max-width:860px){.srow{grid-template-columns:1fr}.srow.flip .art{order:0}.art{order:-1}}
+@media (max-width:480px){.srow li{grid-template-columns:1fr}}
+
+/* platforms */
+.band-mint{background:var(--mint)}
+.pgrid{margin-top:44px;display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:16px}
+.prow{display:flex;flex-direction:column;gap:10px;padding:24px;border-radius:var(--r-lg);background:#fff;box-shadow:var(--sh-1);min-width:0}
+.pico{display:grid;place-items:center;width:52px;height:52px;border-radius:16px;color:var(--ink)}
+.pico .ico{width:26px;height:26px}
+.prow h3{display:flex;align-items:baseline;gap:8px;flex-wrap:wrap;font-size:clamp(22px,2.2vw,28px);font-weight:800;margin-top:4px}
+.prow h3 small{font-size:12.5px;font-weight:600;color:var(--muted)}
+.core-tag{font-size:11px;font-weight:800;letter-spacing:.08em;padding:3px 10px;border-radius:999px;background:var(--brand);color:var(--on-brand);white-space:nowrap;align-self:center}
+.prow p{font-size:14.5px;color:var(--ink-2)}
+.tags{display:flex;flex-wrap:wrap;gap:6px;margin-top:auto;padding-top:6px}
+.tags>span{font-size:12.5px;font-weight:600;padding:4px 11px;border-radius:999px;background:var(--bg);border:1px solid var(--line-2);color:var(--ink-2)}
+@media (max-width:980px){.pgrid{grid-template-columns:1fr 1fr}}
+@media (max-width:620px){.pgrid{grid-template-columns:1fr}}
+
+/* creator network */
+.net{display:grid;grid-template-columns:minmax(0,1.05fr) minmax(0,1fr);gap:clamp(32px,6vw,96px);align-items:start;margin-top:48px}
+.dots-card{background:#fff;border-radius:var(--r-xl);padding:clamp(20px,3vw,36px);box-shadow:var(--sh-1)}
+.dots{display:grid;grid-template-columns:repeat(20,1fr);gap:clamp(3px,.7vw,8px);max-width:560px;margin:0 auto}
+.dots i{display:block;aspect-ratio:1;border-radius:50%}
+.dots i.t1{background:var(--brand)}
+.dots i.t2{background:var(--soft-orange)}
+.dots i.ig{background:transparent;box-shadow:inset 0 0 0 2.5px var(--brand)}
+.legend{display:flex;flex-wrap:wrap;gap:8px 22px;margin-top:22px;font-size:13px;font-weight:600;color:var(--ink-2);justify-content:center}
+.legend i{display:inline-block;width:12px;height:12px;border-radius:50%;vertical-align:-1px;margin-right:7px}
+.legend i.t1{background:var(--brand)}
+.legend i.t2{background:var(--soft-orange)}
+.legend i.ig{box-shadow:inset 0 0 0 2.5px var(--brand)}
+.dots-note{margin-top:12px;font-size:12px;color:var(--muted);text-align:center}
+.slines{display:grid;gap:14px}
+.sline{padding:20px 24px;border-radius:var(--r-lg)}
+.sline:nth-child(1){background:var(--peach)}
+.sline:nth-child(2){background:var(--butter)}
+.sline:nth-child(3){background:var(--sky)}
+.sline small{display:block;font-size:12.5px;font-weight:800;letter-spacing:.08em;color:var(--ink-2)}
+.sline .big{display:block;margin-top:4px;font-size:clamp(38px,5.4vw,64px);font-weight:800;letter-spacing:-.04em;line-height:1.05;font-variant-numeric:tabular-nums;color:var(--brand-ink)}
+.sline .big em{font-style:normal;font-size:.36em;font-weight:700;letter-spacing:0;color:var(--ink-2);margin-left:10px}
+.src{margin-top:14px;font-size:11.5px;line-height:1.5;color:var(--muted)}
+@media (max-width:880px){.net{grid-template-columns:1fr}}
+
+/* systems */
+.band-sky{background:var(--sky)}
+.sys{display:grid;grid-template-columns:minmax(0,1.1fr) minmax(0,1fr);gap:clamp(24px,4vw,56px);align-items:start;margin-top:44px}
+.caps{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+.cap{padding:22px;border-radius:var(--r-lg);background:#fff;box-shadow:var(--sh-1)}
+.cap .ico-box{display:grid;place-items:center;width:46px;height:46px;border-radius:14px;color:var(--ink)}
+.cap h3{margin-top:14px;font-size:18px;font-weight:800}
+.cap p{margin-top:6px;font-size:14px;color:var(--ink-2)}
+.cap:nth-child(1) .ico-box{background:var(--peach)}
+.cap:nth-child(2) .ico-box{background:var(--butter)}
+.cap:nth-child(3) .ico-box{background:var(--mint)}
+.cap:nth-child(4) .ico-box{background:var(--pink)}
+.ex{background:#fff;border-radius:var(--r-xl);padding:clamp(20px,2.6vw,30px);box-shadow:var(--sh-2)}
+.ex-h{display:flex;justify-content:space-between;align-items:flex-start;gap:12px;flex-wrap:wrap}
+.ex-h b{font-size:16px}
+.ex-h small{display:block;font-size:12.5px;color:var(--muted);margin-top:2px}
+.chip{display:inline-block;font-size:12px;font-weight:700;padding:4px 12px;border-radius:999px;background:var(--peach);color:var(--brand-ink);white-space:nowrap}
+.tl{margin-top:18px;display:grid;gap:0;position:relative}
+.tl li{display:grid;grid-template-columns:70px 1fr;gap:14px;padding-bottom:18px;position:relative}
+.tl li::before{content:"";position:absolute;left:70px;top:8px;bottom:-8px;width:2px;background:var(--line);transform:translateX(6px)}
+.tl li::after{content:"";position:absolute;left:70px;top:6px;width:10px;height:10px;border-radius:50%;background:var(--brand);transform:translateX(3px);box-shadow:0 0 0 4px #fff}
+.tl li:last-child::before{display:none}
+.tl .d{font-family:var(--f-mono);font-size:12.5px;color:var(--muted);padding-top:2px}
+.tl .t{padding-left:20px;min-width:0}
+.tl .t b{display:block;font-size:15px;font-weight:800;line-height:1.35}
+.next{margin-top:4px;padding:14px 16px;border-radius:var(--r-md);background:var(--butter)}
+.next-h{display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap;font-size:13.5px;font-weight:700}
+.next-h .mono{color:var(--ink-2);font-weight:500;font-size:12.5px;font-family:var(--f-mono)}
+.track{height:10px;border-radius:999px;background:#fff;margin-top:10px;overflow:hidden}
+.track i{display:block;height:100%;border-radius:999px;background:var(--brand)}
+.exchips{display:flex;flex-wrap:wrap;gap:6px;margin-top:16px}
+.exchips>span{font-size:12.5px;font-weight:600;padding:4px 11px;border-radius:999px;background:var(--bg);border:1px solid var(--line-2);color:var(--ink-2)}
+@media (max-width:980px){.sys{grid-template-columns:1fr}}
+@media (max-width:560px){.caps{grid-template-columns:1fr}}
+
+/* call to action */
+.ctaband{background:var(--butter)}
+.cta{display:grid;grid-template-columns:minmax(0,1.1fr) minmax(0,1fr);gap:clamp(28px,4vw,64px);align-items:center}
+.cta h2{font-size:clamp(34px,5.4vw,66px);font-weight:800;line-height:1.06}
+.cta .lead{margin-top:18px}
+.cta ul{display:grid;gap:12px;margin-top:24px}
+.cta li{display:flex;gap:12px;font-weight:600;font-size:15.5px;line-height:1.45}
+.cta li .tick{display:grid;place-items:center;width:24px;height:24px;border-radius:50%;background:var(--brand);color:var(--on-brand);flex:none;margin-top:1px}
+.cta li .tick .ico{width:14px;height:14px;stroke-width:2.6}
+.cta-card{background:#fff;border-radius:var(--r-lg);padding:clamp(20px,2.6vw,30px);box-shadow:var(--sh-2)}
+.cta-card h3{font-size:19px;font-weight:800}
+.cta-card .hint{font-size:13.5px;color:var(--muted);margin-top:4px}
+.opts{display:flex;flex-wrap:wrap;gap:8px;margin-top:18px}
+.opt{padding:8px 16px;border-radius:999px;border:1.5px solid var(--line-2);background:#fff;font-size:14px;font-weight:700;color:var(--ink-2)}
+.opt[aria-pressed="true"]{background:var(--brand);border-color:var(--brand);color:var(--on-brand)}
+.mail{display:flex;align-items:center;gap:10px;margin-top:22px;padding:6px 6px 6px 16px;border-radius:999px;background:var(--bg);border:1px solid var(--line-2)}
+.mail code{flex:1;min-width:0;font-family:var(--f-mono);font-size:14px;font-weight:500;overflow-wrap:anywhere;user-select:all}
+.cta-act{display:flex;flex-wrap:wrap;gap:10px;margin-top:14px}
+.cta-act .btn{flex:1 1 auto;justify-content:center}
+.fine{margin-top:14px;font-size:12.5px;color:var(--muted);line-height:1.5}
+@media (max-width:900px){.cta{grid-template-columns:1fr}}
+
+/* contact */
+footer.site{padding-block:clamp(56px,7vw,88px) 40px}
+.contact{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:16px;margin-top:36px}
+.cbox{padding:22px 24px;border-radius:var(--r-lg);background:#fff;box-shadow:var(--sh-1)}
+.contact small{display:block;font-size:12.5px;font-weight:800;letter-spacing:.08em;color:var(--muted)}
+.contact b{display:block;margin-top:8px;font-size:clamp(18px,2vw,22px);font-weight:800;line-height:1.35;overflow-wrap:anywhere}
+.fine-print{margin-top:40px;display:flex;flex-wrap:wrap;gap:12px 24px;justify-content:space-between;font-size:13px;color:var(--muted)}
+@media (max-width:760px){.contact{grid-template-columns:1fr}}
+</style>
+</head>
+<body>
+<header class="bar">
+  <div class="page bar-in">
+    <a class="brand" href="#top" aria-label="MKTG Stories">
+      <span class="brand-mark"><img src="data:image/png;base64,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" alt=""></span>
+      <span class="brand-name">MKTG Stories<small>行销日志</small></span>
+    </a>
+    <nav class="nav" aria-label="Sections">
+      <a href="#about"><span class="z">关于我们</span><span class="e">Who We Are</span></a>
+      <a href="#services"><span class="z">服务</span><span class="e">Services</span></a>
+      <a href="#platforms"><span class="z">平台</span><span class="e">Platforms</span></a>
+      <a href="#network"><span class="z">创作者网络</span><span class="e">Network</span></a>
+      <a href="#systems"><span class="z">系统化运营</span><span class="e">Systems</span></a>
+      <a href="#contact"><span class="z">联系我们</span><span class="e">Contact</span></a>
+    </nav>
+    <div class="lang" role="group" aria-label="Language">
+      <button type="button" id="lang-zh" aria-pressed="true">中文</button>
+      <button type="button" id="lang-en" aria-pressed="false">EN</button>
+    </div>
+    <a class="btn btn-brand btn-sm" href="#demo"><span class="z">预约 Demo</span><span class="e">Book a demo</span></a>
+  </div>
+</header>
+
+<main id="top">
+<!-- HERO -->
+<section class="hero" aria-labelledby="hero-h">
+  <div class="page hero-in">
+    <div>
+      <span class="hero-tag">WE'RE MKTG STORIES · 行销日志</span>
+      <h1 id="hero-h"><span class="z">把品牌故事，变成<em>看得见的增长</em>。</span><span class="e">Turning brand stories into <em>growth you can see</em>.</span></h1>
+      <p class="sub">
+        <span class="z">MKTG Stories 行销日志是一家马来西亚的数码营销公司。我们做内容、做 KOC、做广告，也帮品牌把营销和运营做成系统，让每一档 campaign 都有计划、有执行、有数据。</span>
+        <span class="e">MKTG Stories is a Malaysian digital marketing company. We plan content, run KOC programmes and ads, and turn marketing and operations into systems, so every campaign has a plan, an execution and the numbers to show for it.</span>
+      </p>
+      <div class="hero-cta">
+        <a class="btn btn-brand" href="#demo"><span class="z">预约 Demo</span><span class="e">Book a demo</span></a>
+        <a class="btn btn-white" href="#services"><span class="z">看我们的服务</span><span class="e">See our services</span></a>
+      </div>
+      <div class="hero-plat" aria-label="Platforms">
+        <span>小红书 XHS</span><span>TikTok</span><span>LEMON8</span><span>Instagram</span><span>Meta Ads</span>
+      </div>
+    </div>
+    <div class="hero-art">
+      <svg viewBox="0 0 480 400" role="img" aria-label="A creator filming a video with a phone on a tripod, surrounded by likes, comments and a rising chart">
+        <circle cx="240" cy="205" r="178" fill="#FFD3B5"/>
+        <circle cx="402" cy="96" r="44" fill="#FFE79A"/>
+        <circle cx="66" cy="318" r="32" fill="#CFE8FB"/>
+        <!-- table -->
+        <rect x="30" y="338" width="420" height="16" rx="8" fill="#FFE2A0"/>
+        <rect x="64" y="352" width="10" height="36" rx="3" fill="#E9B96A"/>
+        <rect x="406" y="352" width="10" height="36" rx="3" fill="#E9B96A"/>
+        <!-- plant -->
+        <path d="M50 314h38l-6 24H56z" fill="#F36130"/>
+        <ellipse cx="60" cy="294" rx="8" ry="21" fill="#6DBF98" transform="rotate(-25 60 294)"/>
+        <ellipse cx="80" cy="292" rx="8" ry="23" fill="#8ED9B5" transform="rotate(22 80 292)"/>
+        <ellipse cx="70" cy="286" rx="7" ry="25" fill="#5BB287"/>
+        <!-- cup -->
+        <rect x="112" y="312" width="28" height="26" rx="7" fill="#fff"/>
+        <path d="M140 318q13 2 0 15" stroke="#fff" stroke-width="5" fill="none" stroke-linecap="round"/>
+        <path d="M120 306q3-8 7-3 4-8 8-2" stroke="#F36130" stroke-width="3" fill="none" stroke-linecap="round" opacity=".55"/>
+        <!-- person -->
+        <path d="M190 340v-52q0-36 45-36t45 36v52z" fill="#F36130"/>
+        <rect x="226" y="236" width="18" height="24" rx="8" fill="#F2C4A0"/>
+        <path d="M196 292q-34-8-42-52" stroke="#F36130" stroke-width="22" stroke-linecap="round" fill="none"/>
+        <circle cx="154" cy="234" r="12" fill="#F2C4A0"/>
+        <path d="M274 296q20 16 30 34" stroke="#F36130" stroke-width="22" stroke-linecap="round" fill="none"/>
+        <circle cx="236" cy="214" r="31" fill="#F2C4A0"/>
+        <path d="M204 216q-6-46 34-46t36 46q-8-24-28-28-22 8-42 28z" fill="#3A2A22"/>
+        <circle cx="252" cy="168" r="15" fill="#3A2A22"/>
+        <circle cx="225" cy="219" r="3.2" fill="#3A2A22"/><circle cx="247" cy="219" r="3.2" fill="#3A2A22"/>
+        <path d="M226 230q10 9 21 0" stroke="#C8421A" stroke-width="3" fill="none" stroke-linecap="round"/>
+        <circle cx="217" cy="229" r="5" fill="#FF9E86" opacity=".6"/><circle cx="256" cy="229" r="5" fill="#FF9E86" opacity=".6"/>
+        <!-- tripod + phone -->
+        <path d="M338 320l-24 18M338 320v20M338 320l24 18" stroke="#5A3E2E" stroke-width="5" stroke-linecap="round"/>
+        <rect x="335" y="298" width="6" height="24" rx="2" fill="#5A3E2E"/>
+        <rect x="316" y="232" width="44" height="68" rx="9" fill="#3A2E27"/>
+        <rect x="321" y="240" width="34" height="52" rx="5" fill="#FFB38A"/>
+        <circle cx="338" cy="256" r="5" fill="#fff"/>
+        <circle cx="338" cy="256" r="2.2" fill="#F36130"/>
+        <!-- floating cards -->
+        <rect x="30" y="78" width="136" height="68" rx="16" fill="#F2C3A6" opacity=".55"/>
+        <rect x="26" y="72" width="136" height="68" rx="16" fill="#fff"/>
+        <path d="M0 -3C-7 -13-21-3-12 6L0 16 12 6C21-3 7-13 0-3z" transform="translate(56 98) scale(.85)" fill="#F36130"/>
+        <rect x="84" y="90" width="64" height="8" rx="4" fill="#F1DDCD"/><rect x="84" y="106" width="44" height="8" rx="4" fill="#F7E9DE"/>
+        <rect x="338" y="52" width="124" height="84" rx="16" fill="#F2C3A6" opacity=".55"/>
+        <rect x="334" y="46" width="124" height="84" rx="16" fill="#fff"/>
+        <rect x="352" y="94" width="16" height="22" rx="4" fill="#FFC83D"/>
+        <rect x="376" y="82" width="16" height="34" rx="4" fill="#FF8A5B"/>
+        <rect x="400" y="66" width="16" height="50" rx="4" fill="#F36130"/>
+        <path d="M424 70l12-8 6 12" stroke="#5BB287" stroke-width="3" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+        <rect x="352" y="168" width="106" height="50" rx="20" fill="#fff"/>
+        <path d="M376 216l-8 16 22-16z" fill="#fff"/>
+        <circle cx="382" cy="193" r="5.5" fill="#F36130"/><circle cx="405" cy="193" r="5.5" fill="#FFC83D"/><circle cx="428" cy="193" r="5.5" fill="#8EC9F5"/>
+        <path d="M118 176l4 11 11 4-11 4-4 11-4-11-11-4 11-4z" fill="#FFC83D"/>
+        <path d="M300 112l3 8 8 3-8 3-3 8-3-8-8-3 8-3z" fill="#fff"/>
+        <path d="M0 -3C-7 -13-21-3-12 6L0 16 12 6C21-3 7-13 0-3z" transform="translate(300 176) scale(.6)" fill="#FF8A5B"/>
+      </svg>
+      <div class="chipf a"><b>13</b><span class="l"><span class="z">档 campaign<br>已执行</span><span class="e">campaigns<br>delivered</span></span></div>
+      <div class="chipf b"><b>4.97M</b><span class="l"><span class="z">小红书<br>累计曝光</span><span class="e">Xiaohongshu<br>impressions</span></span></div>
+    </div>
+  </div>
+</section>
+<div class="marq" id="marq" role="presentation">
+  <div class="marq-track" id="marq-track">
+    <span class="marq-set"><span class="z">策划。创作。种草。放大。追踪。搭建。复盘。</span><span class="e">Plan. Create. Seed. Amplify. Measure. Build. Review.</span></span>
+  </div>
+  <button type="button" class="marq-btn" id="marq-btn" aria-label="Pause scrolling text" aria-pressed="false">
+    <svg class="ico pause" viewBox="0 0 24 24"><rect x="6" y="5" width="4" height="14" rx="1"/><rect x="14" y="5" width="4" height="14" rx="1"/></svg>
+    <svg class="ico play" viewBox="0 0 24 24"><path d="M7 4.5v15l13-7.5z"/></svg>
+  </button>
+</div>
+
+<!-- WHO WE ARE -->
+<section class="sec" id="about">
+  <div class="page who">
+    <div class="beats" aria-label="Content. Creators. Systems.">
+      <div class="beat"><span class="z">内容。</span><span class="e">Content.</span></div>
+      <div class="beat"><span class="z">博主。</span><span class="e">Creators.</span></div>
+      <div class="beat"><span class="z">系统。</span><span class="e">Systems.</span></div>
+    </div>
+    <div class="body">
+      <p class="eyebrow"><span class="z">公司简介</span><span class="e">Who we are</span></p>
+      <p class="big"><span class="z">MKTG Stories Solutions（行销日志）是一家马来西亚的数码营销公司，服务餐饮、生活消费和企业品牌。我们把品牌想说的话，做成内容、KOC 合作和广告，再用系统把每一档的结果记录下来。</span>
+        <span class="e">MKTG Stories Solutions is a Malaysian digital marketing company serving food and beverage, lifestyle and corporate brands. We turn what a brand wants to say into content, KOC partnerships and ads, then record the result of every campaign in a system.</span></p>
+      <p><span class="z">我们从小红书 KOC 探店活动做起，一步步把 TikTok、LEMON8、Instagram 和广告投放放进同一套打法。今天我们既是品牌的营销团队，也是品牌的系统搭建伙伴：一档 campaign 结束后，留下来的不只是一份报告，还有下次可以直接使用的名单、数据和流程。</span>
+         <span class="e">We started with Xiaohongshu KOC store-visit campaigns and have since brought TikTok, LEMON8, Instagram and paid ads into one approach. We work as a brand's marketing team and as its systems partner: when a campaign ends, you keep more than a report. You keep the creator list, the data and the process for the next one.</span></p>
+      <ul class="principles">
+        <li><span class="ico-box"><svg class="ico" viewBox="0 0 24 24"><path d="M12 21s-7-5.6-7-11a7 7 0 0 1 14 0c0 5.4-7 11-7 11z"/><circle cx="12" cy="10" r="2.5"/></svg></span>
+          <b><span class="z">马来西亚在地，华语与双语市场</span><span class="e">Local to Malaysia, Chinese and bilingual audiences</span></b>
+          <span><span class="z">合作博主来自本地 KOC 网络，内容和档期按马来西亚消费者的节庆与习惯安排。</span><span class="e">Our creators come from a local KOC network, and content follows the festivals and habits of Malaysian consumers.</span></span></li>
+        <li><span class="ico-box"><svg class="ico" viewBox="0 0 24 24"><path d="M4 20V10M10 20V4M16 20v-7M22 20H2"/></svg></span>
+          <b><span class="z">数据看得见</span><span class="e">Numbers you can see</span></b>
+          <span><span class="z">每个客户有自己的专属看板和中英文报告，只看得到自己的数据。</span><span class="e">Each client gets a private dashboard and bilingual reports that show only their own data.</span></span></li>
+        <li><span class="ico-box"><svg class="ico" viewBox="0 0 24 24"><path d="m8 8-5 4 5 4M16 8l5 4-5 4M14 5l-4 14"/></svg></span>
+          <b><span class="z">自己搭系统，所以能快速定制</span><span class="e">We build our own tools, so we can tailor fast</span></b>
+          <span><span class="z">我们用 Vibe Coding 自己开发工具，可以照品牌的流程做，不用硬套现成软件。</span><span class="e">We build tools with vibe coding, shaped around your workflow instead of forcing an off-the-shelf product.</span></span></li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<!-- WHAT WE DO -->
+<section class="sec band-butter" id="whatwedo" style="padding-block:clamp(56px,8vw,96px)">
+  <div class="page state">
+    <p>
+      <span class="z">我们帮品牌用内容、博主和系统做增长。<mark>从一档节庆 campaign，到一整套自己的营销系统，</mark>我们把想法变成成果。</span>
+      <span class="e">We help brands grow with content, creators and systems. <mark>From one seasonal campaign to a full marketing system of your own,</mark> we turn ideas into results.</span>
+    </p>
+    <svg class="chev" viewBox="0 0 64 40" aria-hidden="true"><path d="M2 2h14l16 18L16 38H2l16-18zM32 2h14l16 18-16 18H32l16-18z"/></svg>
+  </div>
+</section>
+
+<!-- SERVICES -->
+<section class="sec" id="services">
+  <div class="page">
+    <p class="eyebrow"><span class="z">我们的服务</span><span class="e">Our services</span></p>
+    <h2 class="h2"><span class="z">三大服务，可以单独做，也可以组合。</span><span class="e">Three services, together or one at a time.</span></h2>
+    <div class="srows">
+      <!-- Digital Marketing -->
+      <article class="srow">
+        <div>
+          <h3>Digital Marketing</h3>
+          <span class="sub"><span class="z">数码营销 · 内容规划 · 广告投递 · KOC</span><span class="e">Content planning · Ad delivery · KOC</span></span>
+          <p class="pitch"><span class="z">从内容到曝光，一条线做完。</span><span class="e">From content to reach, in one line of work.</span></p>
+          <ul>
+            <li><b><span class="z">内容规划</span><span class="e">Content planning</span></b>
+              <span><span class="z">定位、内容支柱、月度主题、脚本与排期，覆盖小红书、TikTok、LEMON8 和 Instagram。</span><span class="e">Positioning, content pillars, monthly themes, scripts and calendars across Xiaohongshu, TikTok, LEMON8 and Instagram.</span></span></li>
+            <li><b><span class="z">广告投递</span><span class="e">Ad delivery</span></b>
+              <span><span class="z">Meta、TikTok、小红书的广告投放与优化，按月看报表，按数据调整。</span><span class="e">Paid campaigns on Meta, TikTok and Xiaohongshu, optimised against monthly reports.</span></span></li>
+            <li><b>KOC</b>
+              <span><span class="z">选人、配对、探店安排、两轮审稿、发布，到结案数据，全程在系统里追踪。</span><span class="e">Creator selection and matching, store-visit scheduling, two draft reviews, publishing and closing data, all tracked in one system.</span></span></li>
+          </ul>
+        </div>
+        <div class="art peach">
+          <svg viewBox="0 0 480 360" role="img" aria-label="A phone showing a social feed with a megaphone and a content calendar">
+            <circle cx="240" cy="182" r="156" fill="#FFD3B5"/>
+            <circle cx="410" cy="60" r="26" fill="#FFE79A"/>
+            <!-- megaphone -->
+            <path d="M40 150h26l66-38v104l-66-38H40a9 9 0 0 1-9-9v-10a9 9 0 0 1 9-9z" fill="#F36130"/>
+            <rect x="56" y="188" width="20" height="38" rx="7" fill="#C8421A"/>
+            <path d="M146 142q16 12 0 28M160 128q30 26 0 56" stroke="#FFC83D" stroke-width="6" fill="none" stroke-linecap="round"/>
+            <!-- phone -->
+            <rect x="176" y="24" width="150" height="304" rx="28" fill="#fff" stroke="#3A2E27" stroke-width="6"/>
+            <rect x="229" y="35" width="44" height="8" rx="4" fill="#3A2E27"/>
+            <rect x="190" y="56" width="122" height="74" rx="10" fill="#FFE2A0"/>
+            <circle cx="212" cy="78" r="9" fill="#F36130"/>
+            <path d="M190 130l34-30 22 18 18-12 48 24z" fill="#FF8A5B"/>
+            <path d="M0 -3C-7 -13-21-3-12 6L0 16 12 6C21-3 7-13 0-3z" transform="translate(206 146) scale(.55)" fill="#F36130"/>
+            <rect x="224" y="140" width="10" height="13" rx="2" fill="#FFC83D"/>
+            <rect x="190" y="164" width="122" height="64" rx="10" fill="#CFE8FB"/>
+            <circle cx="251" cy="196" r="15" fill="#fff"/>
+            <path d="M246 188l13 8-13 8z" fill="#F36130"/>
+            <rect x="190" y="242" width="122" height="72" rx="10" fill="#D9F3E6"/>
+            <circle cx="220" cy="266" r="12" fill="#F2C4A0"/>
+            <path d="M204 314q16-36 32 0z" fill="#F36130"/>
+            <rect x="248" y="258" width="50" height="8" rx="4" fill="#fff"/><rect x="248" y="276" width="34" height="8" rx="4" fill="#fff"/>
+            <!-- calendar -->
+            <rect x="344" y="190" width="108" height="108" rx="14" fill="#fff"/>
+            <path d="M344 204a14 14 0 0 1 14-14h80a14 14 0 0 1 14 14v14H344z" fill="#F36130"/>
+            <rect x="366" y="182" width="7" height="18" rx="3" fill="#3A2E27"/><rect x="423" y="182" width="7" height="18" rx="3" fill="#3A2E27"/>
+            <g fill="#F1DDCD"><rect x="358" y="230" width="16" height="14" rx="4"/><rect x="380" y="230" width="16" height="14" rx="4"/><rect x="402" y="230" width="16" height="14" rx="4"/><rect x="424" y="230" width="16" height="14" rx="4"/><rect x="358" y="252" width="16" height="14" rx="4"/><rect x="424" y="252" width="16" height="14" rx="4"/><rect x="358" y="274" width="16" height="14" rx="4"/><rect x="380" y="274" width="16" height="14" rx="4"/></g>
+            <rect x="380" y="252" width="16" height="14" rx="4" fill="#FFC83D"/><rect x="402" y="252" width="16" height="14" rx="4" fill="#F36130"/><rect x="402" y="274" width="16" height="14" rx="4" fill="#8ED9B5"/>
+            <!-- bubbles -->
+            <circle cx="392" cy="96" r="30" fill="#FFC83D"/><path d="M384 82l24 14-24 14z" fill="#fff"/>
+            <circle cx="118" cy="66" r="24" fill="#fff"/>
+            <path d="M0 -3C-7 -13-21-3-12 6L0 16 12 6C21-3 7-13 0-3z" transform="translate(118 64) scale(.8)" fill="#F36130"/>
+            <!-- plant -->
+            <path d="M52 296h34l-5 26H57z" fill="#F36130"/>
+            <ellipse cx="60" cy="278" rx="7" ry="19" fill="#6DBF98" transform="rotate(-25 60 278)"/>
+            <ellipse cx="80" cy="276" rx="7" ry="21" fill="#8ED9B5" transform="rotate(22 80 276)"/>
+            <ellipse cx="70" cy="270" rx="6" ry="23" fill="#5BB287"/>
+            <path d="M130 250l3 9 9 3-9 3-3 9-3-9-9-3 9-3z" fill="#fff"/>
+          </svg>
+        </div>
+      </article>
+      <!-- Systematic -->
+      <article class="srow flip">
+        <div>
+          <h3>Systematic <span class="z">转型</span><span class="e">Transformation</span></h3>
+          <span class="sub"><span class="z">系统化运营 · 建立系统 · Vibe Coding</span><span class="e">Systematic operations · Systems · Vibe coding</span></span>
+          <p class="pitch"><span class="z">把靠人记、靠表格的运营工作，变成有流程、会累积数据的系统。</span><span class="e">Turn operations that live in people's heads and spreadsheets into a system with a process and data that builds up.</span></p>
+          <ul>
+            <li><b><span class="z">建立系统</span><span class="e">Build the system</span></b>
+              <span><span class="z">内容运营、数据报表、客户与业务管理，照你的流程搭，不用硬套现成软件。</span><span class="e">Content operations, data reporting and client and business management, built around your process instead of an off-the-shelf tool.</span></span></li>
+            <li><b>Vibe Coding</b>
+              <span><span class="z">用 AI 协作开发，快速做出能马上使用的版本，边用边改；也把 AI 放进流程里，帮团队起草、整理和写报告。</span><span class="e">We build with AI, ship a usable first version quickly and refine it as you use it. AI also joins the workflow to draft, organise and write reports.</span></span></li>
+            <li><b><span class="z">系统化运营</span><span class="e">Systematic operations</span></b>
+              <span><span class="z">流程标准化、分工清楚、数据留得住。换人、换团队，运营也不会断。</span><span class="e">Standard processes, clear roles and data that stays. When people or teams change, operations carry on.</span></span></li>
+          </ul>
+        </div>
+        <div class="art sky">
+          <svg viewBox="0 0 480 360" role="img" aria-label="A laptop showing a dashboard, connected workflow steps and a friendly robot assistant">
+            <circle cx="240" cy="190" r="154" fill="#CFE8FB"/>
+            <circle cx="52" cy="60" r="24" fill="#FFE79A"/>
+            <!-- workflow nodes -->
+            <path d="M144 48H190M236 48H282M328 48H374" stroke="#3A2E27" stroke-width="3" stroke-dasharray="3 7" stroke-linecap="round"/>
+            <rect x="100" y="26" width="44" height="44" rx="13" fill="#FFE79A"/><path d="M111 48l8 8 14-16" stroke="#3A2E27" stroke-width="4" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+            <rect x="190" y="26" width="44" height="44" rx="13" fill="#FFD3B5"/><circle cx="203" cy="48" r="3.5" fill="#3A2E27"/><circle cx="212" cy="48" r="3.5" fill="#3A2E27"/><circle cx="221" cy="48" r="3.5" fill="#3A2E27"/>
+            <rect x="282" y="26" width="44" height="44" rx="13" fill="#D9F3E6"/><circle cx="304" cy="48" r="9" fill="none" stroke="#3A2E27" stroke-width="4"/><circle cx="304" cy="48" r="2.5" fill="#3A2E27"/>
+            <rect x="374" y="26" width="44" height="44" rx="13" fill="#FFE3E9"/><path d="M386 60v-10M396 60v-20M406 60v-14" stroke="#3A2E27" stroke-width="5" stroke-linecap="round"/>
+            <!-- laptop -->
+            <rect x="106" y="94" width="268" height="172" rx="14" fill="#3A2E27"/>
+            <rect x="116" y="104" width="248" height="152" rx="7" fill="#fff"/>
+            <rect x="116" y="104" width="44" height="152" rx="7" fill="#FFF1E6"/>
+            <rect x="126" y="118" width="24" height="6" rx="3" fill="#F36130"/><rect x="126" y="134" width="24" height="6" rx="3" fill="#F1DDCD"/><rect x="126" y="150" width="24" height="6" rx="3" fill="#F1DDCD"/><rect x="126" y="166" width="24" height="6" rx="3" fill="#F1DDCD"/>
+            <rect x="172" y="114" width="56" height="34" rx="8" fill="#FFF0BE"/><rect x="236" y="114" width="56" height="34" rx="8" fill="#E4F2FF"/>
+            <rect x="180" y="124" width="22" height="6" rx="3" fill="#3A2E27" opacity=".6"/><rect x="244" y="124" width="22" height="6" rx="3" fill="#3A2E27" opacity=".6"/>
+            <path d="M180 140h30M244 140h36" stroke="#F36130" stroke-width="5" stroke-linecap="round"/>
+            <circle cx="326" cy="132" r="20" fill="none" stroke="#E4F2FF" stroke-width="12"/>
+            <circle cx="326" cy="132" r="20" fill="none" stroke="#F36130" stroke-width="12" stroke-dasharray="52 200" transform="rotate(-90 326 132)"/>
+            <path d="M174 214l24-22 22 12 26-28 24 14 30-30v66H174z" fill="#FFE3D3"/>
+            <polyline points="174,214 198,192 220,204 246,176 270,190 300,160" stroke="#F36130" stroke-width="4" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+            <rect x="316" y="170" width="40" height="76" rx="8" fill="#FFF1E6"/><rect x="321" y="178" width="30" height="14" rx="4" fill="#fff"/><rect x="321" y="198" width="30" height="14" rx="4" fill="#fff"/><rect x="321" y="218" width="30" height="14" rx="4" fill="#FFC83D"/>
+            <path d="M80 268h320l-14 24H94z" fill="#DCC9B8"/><rect x="204" y="268" width="72" height="6" rx="3" fill="#BBA694"/>
+            <!-- robot -->
+            <line x1="40" y1="224" x2="40" y2="236" stroke="#3A2E27" stroke-width="4" stroke-linecap="round"/><circle cx="40" cy="220" r="5" fill="#F36130"/>
+            <rect x="14" y="236" width="52" height="42" rx="14" fill="#fff" stroke="#3A2E27" stroke-width="4"/>
+            <circle cx="30" cy="256" r="5" fill="#3A2E27"/><circle cx="50" cy="256" r="5" fill="#3A2E27"/><path d="M32 267q8 6 16 0" stroke="#F36130" stroke-width="3" fill="none" stroke-linecap="round"/>
+            <rect x="22" y="282" width="36" height="32" rx="10" fill="#8EC9F5"/><rect x="2" y="288" width="14" height="8" rx="4" fill="#8EC9F5"/>
+            <!-- plant -->
+            <path d="M418 296h34l-5 26h-24z" fill="#F36130"/>
+            <ellipse cx="426" cy="278" rx="7" ry="19" fill="#6DBF98" transform="rotate(-25 426 278)"/>
+            <ellipse cx="446" cy="276" rx="7" ry="21" fill="#8ED9B5" transform="rotate(22 446 276)"/>
+            <ellipse cx="436" cy="270" rx="6" ry="23" fill="#5BB287"/>
+          </svg>
+        </div>
+      </article>
+      <!-- Campaign -->
+      <article class="srow">
+        <div>
+          <h3>Campaign <span class="z">规划</span><span class="e">Planning</span></h3>
+          <span class="sub"><span class="z">节庆与新品 campaign 全案</span><span class="e">Seasonal and launch campaigns</span></span>
+          <p class="pitch"><span class="z">一档 campaign，从 brief 做到结案。</span><span class="e">One campaign, from brief to close-out.</span></p>
+          <ul>
+            <li><b><span class="z">档期与创意</span><span class="e">Calendar and concept</span></b>
+              <span><span class="z">母亲节、父亲节、中秋、圣诞、农历新年，提前排好档期，定下创意方向。</span><span class="e">Mother's Day, Father's Day, Mid-Autumn, Christmas, Chinese New Year: planned early, with a clear creative direction.</span></span></li>
+            <li><b><span class="z">执行</span><span class="e">Execution</span></b>
+              <span><span class="z">安排 Tier 1 / Tier 2 KOC 与 KOL 的组合，管理探店、发布时间表、审稿和跟进。</span><span class="e">A mix of Tier 1 and Tier 2 KOCs and KOLs, with store visits, publishing schedules, reviews and follow-ups managed for you.</span></span></li>
+            <li><b><span class="z">结案</span><span class="e">Close-out</span></b>
+              <span><span class="z">每档结案报告：曝光、观看、互动、投入与回报，以及下一档怎么调整。</span><span class="e">A report per campaign: impressions, views, engagement, spend and return, and what to change next time.</span></span></li>
+          </ul>
+        </div>
+        <div class="art butter">
+          <svg viewBox="0 0 480 360" role="img" aria-label="Two people planning a campaign on a calendar board with sticky notes, lanterns and gift boxes">
+            <circle cx="240" cy="184" r="156" fill="#FFE79A"/>
+            <!-- lanterns -->
+            <path d="M52 0v34M30 0v70" stroke="#3A2E27" stroke-width="2.5"/>
+            <ellipse cx="52" cy="52" rx="17" ry="21" fill="#F36130"/><path d="M52 31v42M40 36q-6 16 0 32M64 36q6 16 0 32" stroke="#C8421A" stroke-width="2.5" fill="none"/><rect x="46" y="70" width="12" height="5" fill="#FFC83D"/><path d="M52 75v16" stroke="#FFC83D" stroke-width="3"/>
+            <ellipse cx="30" cy="92" rx="13" ry="17" fill="#FF8A5B"/><path d="M30 75v34" stroke="#C8421A" stroke-width="2.5"/><path d="M30 109v14" stroke="#FFC83D" stroke-width="3"/>
+            <!-- board -->
+            <rect x="126" y="52" width="232" height="212" rx="18" fill="#fff" stroke="#3A2E27" stroke-width="5"/>
+            <path d="M126 70a18 18 0 0 1 18-18h196a18 18 0 0 1 18 18v22H126z" fill="#F36130"/>
+            <rect x="170" y="42" width="8" height="20" rx="4" fill="#3A2E27"/><rect x="306" y="42" width="8" height="20" rx="4" fill="#3A2E27"/>
+            <g stroke="#F1DDCD" stroke-width="2"><path d="M126 160h232M126 216h232M204 92v172M282 92v172"/></g>
+            <g transform="rotate(-6 158 128)"><rect x="140" y="108" width="40" height="40" rx="5" fill="#FFE79A"/><path d="M150 122h20M150 132h14" stroke="#3A2E27" stroke-width="3" stroke-linecap="round" opacity=".5"/></g>
+            <g transform="rotate(5 232 126)"><rect x="212" y="106" width="40" height="40" rx="5" fill="#FFB3C1"/><path d="M0 -3C-7 -13-21-3-12 6L0 16 12 6C21-3 7-13 0-3z" transform="translate(232 124) scale(.7)" fill="#F36130"/></g>
+            <g transform="rotate(-4 312 128)"><rect x="292" y="108" width="40" height="40" rx="5" fill="#CFF1E1"/><path d="M302 122h20M302 132h14" stroke="#3A2E27" stroke-width="3" stroke-linecap="round" opacity=".5"/></g>
+            <g transform="rotate(4 158 186)"><rect x="140" y="166" width="40" height="40" rx="5" fill="#CDE8FB"/><path d="M150 180h20M150 190h14" stroke="#3A2E27" stroke-width="3" stroke-linecap="round" opacity=".5"/></g>
+            <g transform="rotate(-5 232 186)"><rect x="212" y="166" width="40" height="40" rx="5" fill="#FFD3B5"/><path d="M232 176l3 8 8 1-6 5 2 8-7-4-7 4 2-8-6-5 8-1z" fill="#F36130"/></g>
+            <g transform="rotate(6 312 186)"><rect x="292" y="166" width="40" height="40" rx="5" fill="#FFE79A"/><path d="M302 180h20M302 190h14" stroke="#3A2E27" stroke-width="3" stroke-linecap="round" opacity=".5"/></g>
+            <g transform="rotate(-3 158 240)"><rect x="140" y="222" width="40" height="36" rx="5" fill="#CFF1E1"/></g>
+            <g transform="rotate(5 232 240)"><rect x="212" y="222" width="40" height="36" rx="5" fill="#FFE3E9"/></g>
+            <!-- left person -->
+            <rect x="62" y="214" width="14" height="46" rx="6" fill="#3A2E27"/><rect x="84" y="214" width="14" height="46" rx="6" fill="#3A2E27"/>
+            <rect x="56" y="164" width="48" height="68" rx="20" fill="#5BB287"/>
+            <path d="M96 186L132 150" stroke="#5BB287" stroke-width="14" stroke-linecap="round"/><circle cx="136" cy="146" r="8" fill="#F2C4A0"/>
+            <circle cx="80" cy="146" r="17" fill="#F2C4A0"/>
+            <path d="M62 146q-2-24 20-24t18 22q-8-12-22-12-8 6-16 14z" fill="#3A2A22"/>
+            <circle cx="74" cy="148" r="2.4" fill="#3A2A22"/><circle cx="88" cy="148" r="2.4" fill="#3A2A22"/><path d="M75 156q6 5 12 0" stroke="#C8421A" stroke-width="2.4" fill="none" stroke-linecap="round"/>
+            <!-- right person -->
+            <rect x="380" y="214" width="14" height="46" rx="6" fill="#3A2E27"/><rect x="402" y="214" width="14" height="46" rx="6" fill="#3A2E27"/>
+            <rect x="374" y="164" width="48" height="68" rx="20" fill="#8EC9F5"/>
+            <path d="M384 186L350 150" stroke="#8EC9F5" stroke-width="14" stroke-linecap="round"/><circle cx="346" cy="146" r="8" fill="#D99A73"/>
+            <circle cx="398" cy="146" r="17" fill="#D99A73"/>
+            <path d="M380 142q4-22 20-22t18 20q-10-10-18-8-12 2-20 10z" fill="#2B1E16"/>
+            <circle cx="392" cy="148" r="2.4" fill="#2B1E16"/><circle cx="406" cy="148" r="2.4" fill="#2B1E16"/><path d="M393 156q6 5 12 0" stroke="#C8421A" stroke-width="2.4" fill="none" stroke-linecap="round"/>
+            <!-- gifts -->
+            <rect x="168" y="292" width="58" height="42" rx="7" fill="#F36130"/><rect x="193" y="292" width="8" height="42" fill="#FFD966"/><path d="M197 292q-18-18-12-2 5 8 12 2zM197 292q18-18 12-2-5 8-12 2z" fill="#FFD966"/>
+            <rect x="238" y="306" width="46" height="28" rx="6" fill="#FFB3C1"/><rect x="258" y="306" width="7" height="28" fill="#fff"/>
+            <ellipse cx="240" cy="338" rx="150" ry="6" fill="#F2D27A" opacity=".6"/>
+            <!-- plane + sparkles -->
+            <path d="M396 64l56-22-20 50-14-16-14 12z" fill="#fff" stroke="#3A2E27" stroke-width="3" stroke-linejoin="round"/>
+            <path d="M420 120l3 8 8 3-8 3-3 8-3-8-8-3 8-3z" fill="#fff"/>
+            <path d="M448 188l2 6 6 2-6 2-2 6-2-6-6-2 6-2z" fill="#F36130"/>
+          </svg>
+        </div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- PLATFORMS -->
+<section class="sec band-mint" id="platforms">
+  <div class="page">
+    <p class="eyebrow"><span class="z">服务平台</span><span class="e">Platforms</span></p>
+    <h2 class="h2"><span class="z">你的顾客在哪里，我们就在哪里做内容。</span><span class="e">We make content where your customers already are.</span></h2>
+    <div class="pgrid">
+      <article class="prow">
+        <span class="pico" style="background:var(--peach)"><svg class="ico" viewBox="0 0 24 24"><rect x="5" y="3" width="14" height="18" rx="2.5"/><path d="M9 8h6M9 12h6M9 16h3"/></svg></span>
+        <h3>小红书 <small>Xiaohongshu / RED</small><span class="core-tag"><span class="z">核心平台</span><span class="e">CORE</span></span></h3>
+        <p><span class="z">KOC 探店、图文与视频种草，以及搜索流量的布局。我们的 13 档 campaign 都在这里完成。</span><span class="e">KOC store visits, photo and video seeding, and search traffic. All 13 of our campaigns so far ran here.</span></p>
+        <div class="tags"><span><span class="z">KOC 探店</span><span class="e">KOC store visits</span></span><span><span class="z">种草笔记</span><span class="e">Seeding posts</span></span><span><span class="z">搜索布局</span><span class="e">Search</span></span></div>
+      </article>
+      <article class="prow">
+        <span class="pico" style="background:var(--sky)"><svg class="ico" viewBox="0 0 24 24"><path d="M10 18V5l9 2"/><circle cx="7.5" cy="18" r="3"/></svg></span>
+        <h3>TikTok</h3>
+        <p><span class="z">短视频内容、KOC seeding 和 TikTok 广告，也可以配合 TikTok Shop 做内容导流。</span><span class="e">Short video, KOC seeding and TikTok ads, with content support for TikTok Shop.</span></p>
+        <div class="tags"><span><span class="z">短视频</span><span class="e">Short video</span></span><span>KOC Seeding</span><span>TikTok Ads</span></div>
+      </article>
+      <article class="prow">
+        <span class="pico" style="background:var(--butter)"><svg class="ico" viewBox="0 0 24 24"><ellipse cx="12" cy="13.5" rx="8.5" ry="6" transform="rotate(-20 12 13.5)"/><path d="M16.5 6c1.6 1.6 1.4 3.4-.4 4.6"/></svg></span>
+        <h3>LEMON8</h3>
+        <p><span class="z">生活方式图文种草，把品牌放进大家的日常分享和灵感清单里。</span><span class="e">Lifestyle photo-led seeding that places your brand in everyday posts and inspiration lists.</span></p>
+        <div class="tags"><span><span class="z">图文种草</span><span class="e">Photo seeding</span></span><span><span class="z">生活方式</span><span class="e">Lifestyle</span></span><span><span class="z">内容规划</span><span class="e">Content planning</span></span></div>
+      </article>
+      <article class="prow">
+        <span class="pico" style="background:var(--pink)"><svg class="ico" viewBox="0 0 24 24"><rect x="3" y="6.5" width="18" height="13" rx="3.5"/><circle cx="12" cy="13" r="3.5"/><path d="M8 6.5 9.5 4h5L16 6.5"/></svg></span>
+        <h3>Instagram</h3>
+        <p><span class="z">KOL 合作、Reels 和图文内容，目前合作过 13 位 Instagram KOL。</span><span class="e">KOL partnerships, Reels and carousels. We have worked with 13 Instagram KOLs so far.</span></p>
+        <div class="tags"><span>KOL</span><span>Reels</span><span>Stories</span></div>
+      </article>
+      <article class="prow">
+        <span class="pico" style="background:var(--sky)"><svg class="ico" viewBox="0 0 24 24"><circle cx="12" cy="12" r="8.5"/><circle cx="12" cy="12" r="4.5"/><circle cx="12" cy="12" r="1"/></svg></span>
+        <h3>Facebook <small>&amp; Meta Ads</small></h3>
+        <p><span class="z">Facebook 与 Instagram 的广告投放，把内容里的互动，接到转化、名单和到店。</span><span class="e">Facebook and Instagram ads that connect engagement from content to conversions, leads and store visits.</span></p>
+        <div class="tags"><span>Meta Ads</span><span><span class="z">再营销</span><span class="e">Retargeting</span></span><span><span class="z">月度报表</span><span class="e">Monthly report</span></span></div>
+      </article>
+      <article class="prow">
+        <span class="pico" style="background:var(--peach)"><svg class="ico" viewBox="0 0 24 24"><path d="M5 8h14l-1.2 12H6.2z"/><path d="M9 8V6.5a3 3 0 0 1 6 0V8"/></svg></span>
+        <h3><span class="z">电商平台</span><span class="e">E-commerce</span></h3>
+        <p><span class="z">Lazada、Shopee、TikTok Shop 的店铺运营，以及配合销售的内容和 KOC。</span><span class="e">Store operations on Lazada, Shopee and TikTok Shop, with content and KOCs that support sales.</span></p>
+        <div class="tags"><span>Lazada</span><span>Shopee</span><span>TikTok Shop</span></div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- NETWORK -->
+<section class="sec" id="network">
+  <div class="page">
+    <p class="eyebrow"><span class="z">创作者网络</span><span class="e">Our network</span></p>
+    <h2 class="h2"><span class="z">206 位合作过的博主，每个点是一位。</span><span class="e">206 creators we have worked with, one dot each.</span></h2>
+    <div class="net">
+      <div class="dots-card">
+        <div class="dots" id="dots" role="img" aria-label="206 creators: 39 Tier 1 KOCs, 154 Tier 2 KOCs, 13 Instagram KOLs"></div>
+        <div class="legend">
+          <span><i class="t1"></i>Tier 1 KOC · 39</span>
+          <span><i class="t2"></i>Tier 2 KOC · 154</span>
+          <span><i class="ig"></i>Instagram KOL · 13</span>
+        </div>
+        <p class="dots-note"><span class="z">来源：Creators Platform 博主库与合作记录，截至 2026.10.15。</span><span class="e">Source: Creators Platform creator database and collaboration log, as of 15 Oct 2026.</span></p>
+      </div>
+      <div>
+        <div class="slines">
+          <div class="sline"><small><span class="z">Creators Platform 记录始于</span><span class="e">TRACKED ON CREATORS PLATFORM SINCE</span></small><span class="big">2025.05</span></div>
+          <div class="sline"><small><span class="z">我们已经执行</span><span class="e">CAMPAIGNS DELIVERED</span></small><span class="big">13<em><span class="z">档 campaign · 348 篇笔记</span><span class="e">campaigns · 348 posts</span></em></span></div>
+          <div class="sline"><small><span class="z">累计曝光（小红书）</span><span class="e">XIAOHONGSHU IMPRESSIONS</span></small><span class="big">4.97M</span></div>
+        </div>
+        <p class="src"><span class="z">来源：Creators Platform 看板。曝光为小红书数据；博主与笔记数含 13 位 Instagram KOL。</span><span class="e">Source: Creators Platform dashboard. Impressions are Xiaohongshu only; creator and post counts include 13 Instagram KOLs.</span></p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SYSTEMS -->
+<section class="sec band-sky" id="systems">
+  <div class="page">
+    <p class="eyebrow"><span class="z">系统化运营</span><span class="e">Systematic operations</span></p>
+    <h2 class="h2"><span class="z">不只是做内容，也帮你把运营搭成系统。</span><span class="e">Not just content: we build your operations into a system.</span></h2>
+    <p class="lead"><span class="z">营销做得再好，如果数据散在各个表格和聊天群里，下一次还是从头开始。我们帮品牌把流程、数据和报表放进同一个系统。</span><span class="e">Even great marketing starts from zero next time if the data is scattered across spreadsheets and chats. We put your process, data and reports into one system.</span></p>
+    <div class="sys">
+      <div class="caps">
+        <article class="cap">
+          <span class="ico-box"><svg class="ico" viewBox="0 0 24 24"><rect x="3" y="4" width="18" height="16" rx="3"/><path d="M3 9h18M8 13h8"/></svg></span>
+          <h3><span class="z">内容运营系统</span><span class="e">Content operations</span></h3>
+          <p><span class="z">品牌指南、内容支柱、月度规划、审批与发布排期放在同一处，团队和客户看同一份计划。</span><span class="e">Brand guidelines, pillars, monthly plans, approvals and publishing schedules in one place, so the team and the client see the same plan.</span></p>
+        </article>
+        <article class="cap">
+          <span class="ico-box"><svg class="ico" viewBox="0 0 24 24"><path d="M4 20V10M10 20V4M16 20v-7M22 20H2"/></svg></span>
+          <h3><span class="z">数据看板与自动报表</span><span class="e">Dashboards and reports</span></h3>
+          <p><span class="z">各平台的数据汇总成一份看板，按月整理成报告，不再手工拼表格。</span><span class="e">Data from every platform in one dashboard, compiled into monthly reports without hand-built spreadsheets.</span></p>
+        </article>
+        <article class="cap">
+          <span class="ico-box"><svg class="ico" viewBox="0 0 24 24"><circle cx="9" cy="8" r="3"/><path d="M3 20c0-4 3-6 6-6s6 2 6 6"/><path d="M16 5a3 3 0 0 1 0 6M18 14c2 1 3 3 3 6"/></svg></span>
+          <h3><span class="z">客户与业务管理</span><span class="e">Client and business management</span></h3>
+          <p><span class="z">客户跟进、项目进度和收入记录集中在一个后台，一眼看到今天要做什么。</span><span class="e">Client follow-ups, project progress and revenue in one back office, so today's priorities are clear at a glance.</span></p>
+        </article>
+        <article class="cap">
+          <span class="ico-box"><svg class="ico" viewBox="0 0 24 24"><path d="M12 3l2.2 5.8L20 11l-5.8 2.2L12 19l-2.2-5.8L4 11l5.8-2.2z"/></svg></span>
+          <h3><span class="z">AI 工作流</span><span class="e">AI workflows</span></h3>
+          <p><span class="z">用 AI 起草内容规划、整理数据、撰写报告，由团队审核后使用，把重复的工作交给系统。</span><span class="e">AI drafts content plans, organises data and writes reports, and the team reviews before use, leaving repetitive work to the system.</span></p>
+        </article>
+      </div>
+      <div class="ex">
+        <div class="ex-h">
+          <div><b><span class="z">例子：Creators Platform</span><span class="e">Example: Creators Platform</span></b><small><span class="z">我们自己建的 KOC 管理系统</span><span class="e">Our own KOC management system</span></small></div>
+          <span class="chip"><span class="z">里程碑</span><span class="e">Milestones</span></span>
+        </div>
+        <ol class="tl">
+          <li><span class="d">2025.05</span><div class="t"><b><span class="z">第一档 campaign</span><span class="e">First campaign</span></b></div></li>
+          <li><span class="d">2025.09</span><div class="t"><b><span class="z">累计曝光 1M · 第 100 篇笔记</span><span class="e">1M impressions · Post #100</span></b></div></li>
+          <li><span class="d">2025.12</span><div class="t"><b><span class="z">累计曝光 2M · 第 100 位博主</span><span class="e">2M impressions · Creator #100</span></b></div></li>
+          <li><span class="d">2026.01</span><div class="t"><b><span class="z">累计曝光 3M</span><span class="e">3M impressions</span></b></div></li>
+          <li><span class="d">2026.05</span><div class="t"><b><span class="z">累计曝光 4M · 第 150 位博主</span><span class="e">4M impressions · Creator #150</span></b></div></li>
+          <li><span class="d">2026.09</span><div class="t"><b><span class="z">第 300 篇笔记 · 第 200 位博主</span><span class="e">Post #300 · Creator #200</span></b></div></li>
+        </ol>
+        <div class="next">
+          <div class="next-h"><span><span class="z">下一个目标：累计曝光 5M</span><span class="e">Next goal: 5M impressions</span></span><span class="mono">4,969,858 / 5,000,000</span></div>
+          <div class="track" role="img" aria-label="99.4%"><i style="width:99.4%"></i></div>
+        </div>
+        <div class="exchips">
+          <span><span class="z">客户专属页</span><span class="e">Private client pages</span></span>
+          <span><span class="z">每篇笔记链接</span><span class="e">Link to every post</span></span>
+          <span><span class="z">投入与回报</span><span class="e">Spend and return</span></span>
+          <span><span class="z">中文 / English + PDF</span><span class="e">Chinese / English + PDF</span></span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CTA -->
+<section class="sec ctaband" id="demo">
+  <div class="page cta">
+    <div>
+      <h2><span class="z">准备好把故事<br>变成增长了吗？</span><span class="e">Ready to turn your story into growth?</span></h2>
+      <p class="lead"><span class="z">预约一次 30 分钟的 Demo，我们带你看看系统怎么运作，再聊你的品牌适合哪些平台、什么样的 campaign。</span><span class="e">Book a 30-minute demo. We show you how the system works, then talk about which platforms and which kind of campaign suit your brand.</span></p>
+      <ul>
+        <li><span class="tick"><svg class="ico" viewBox="0 0 24 24"><path d="m5 12 5 5 9-10"/></svg></span><span><span class="z">看看系统怎么运作：看板、报表、运营流程</span><span class="e">See how the system works: dashboards, reports, operating flow</span></span></li>
+        <li><span class="tick"><svg class="ico" viewBox="0 0 24 24"><path d="m5 12 5 5 9-10"/></svg></span><span><span class="z">聊你的品牌：目标、受众，以及小红书、TikTok、LEMON8 怎么搭配</span><span class="e">Talk about your brand: goals, audience and how to combine Xiaohongshu, TikTok and LEMON8</span></span></li>
+        <li><span class="tick"><svg class="ico" viewBox="0 0 24 24"><path d="m5 12 5 5 9-10"/></svg></span><span><span class="z">粗估一档 campaign 的时间线和预算范围</span><span class="e">Get a rough timeline and budget range for one campaign</span></span></li>
+      </ul>
+    </div>
+    <div class="cta-card">
+      <h3><span class="z">你想先聊哪一块？</span><span class="e">What would you like to start with?</span></h3>
+      <p class="hint"><span class="z">可以多选，邮件内容会自动带上。</span><span class="e">Pick any that apply. They are added to your email.</span></p>
+      <div class="opts" id="opts">
+        <button type="button" class="opt" id="opt-1" aria-pressed="false" data-zh="Digital Marketing" data-en="Digital Marketing">Digital Marketing</button>
+        <button type="button" class="opt" id="opt-2" aria-pressed="false" data-zh="系统化转型" data-en="Systematic transformation"><span class="z">系统化转型</span><span class="e">Systematic transformation</span></button>
+        <button type="button" class="opt" id="opt-3" aria-pressed="false" data-zh="Campaign 规划" data-en="Campaign planning"><span class="z">Campaign 规划</span><span class="e">Campaign planning</span></button>
+        <button type="button" class="opt" id="opt-4" aria-pressed="false" data-zh="还不确定，想先聊聊" data-en="Not sure yet, let's talk"><span class="z">还不确定，想先聊聊</span><span class="e">Not sure yet</span></button>
+      </div>
+      <div class="mail"><code id="mail-addr">contact@mktg-stories.com</code><button type="button" class="btn btn-brand btn-sm" id="copy-btn"><span class="z">复制邮箱</span><span class="e">Copy email</span></button></div>
+      <div class="cta-act"><a class="btn btn-brand" id="mail-link" href="mailto:contact@mktg-stories.com"><span class="z">发邮件预约 Demo</span><span class="e">Email us to book</span></a></div>
+      <p class="fine"><span class="z">按钮会打开你的邮件程序；如果没有反应，请复制邮箱地址，直接发送给我们。</span><span class="e">The button opens your email app. If nothing happens, copy the address and write to us directly.</span></p>
+    </div>
+  </div>
+</section>
+</main>
+
+<footer class="site" id="contact">
+  <div class="page">
+    <p class="eyebrow"><span class="z">联系我们</span><span class="e">Contact</span></p>
+    <h2 class="h2"><span class="z">来聊聊你的下一档 campaign。</span><span class="e">Let's talk about your next campaign.</span></h2>
+    <div class="contact">
+      <div class="cbox"><small><span class="z">公司</span><span class="e">COMPANY</span></small><b>MKTG Stories Solutions<br>行销日志</b></div>
+      <div class="cbox"><small><span class="z">所在地</span><span class="e">BASED IN</span></small><b>Malaysia</b></div>
+      <div class="cbox"><small><span class="z">邮箱</span><span class="e">EMAIL</span></small><b>contact@mktg-stories.com</b></div>
+    </div>
+    <div class="fine-print"><span>© 2026 MKTG Stories Solutions</span><span>小红书 · TikTok · LEMON8 · Instagram · Meta Ads</span></div>
+  </div>
+</footer>
+
+<script>
+(function(){
+  var root=document.documentElement;
+  var EMAIL='contact@mktg-stories.com';
+
+  /* word band: duplicate the set once so the loop is seamless */
+  var track=document.getElementById('marq-track');
+  var set=track.querySelector('.marq-set');
+  var copy=set.cloneNode(true); copy.setAttribute('aria-hidden','true'); track.appendChild(copy);
+  var marq=document.getElementById('marq'), mb=document.getElementById('marq-btn');
+  mb.addEventListener('click',function(){
+    var p=marq.classList.toggle('paused');
+    mb.setAttribute('aria-pressed',String(p));
+    mb.setAttribute('aria-label',p?'Play scrolling text':'Pause scrolling text');
+  });
+
+  /* creator dot grid: 206 dots = 39 Tier 1 + 154 Tier 2 + 13 Instagram KOL, laid out as a round cluster */
+  var cols=20, rows=14, N=206, cx=(cols-1)/2, cy=(rows-1)/2, cells=[];
+  for(var y=0;y<rows;y++)for(var x=0;x<cols;x++){
+    var dx=(x-cx)/(cols/2), dy=(y-cy)/(rows/2);
+    cells.push({k:y*cols+x,d:dx*dx+dy*dy});
+  }
+  cells.sort(function(a,b){return a.d-b.d||a.k-b.k});
+  var types=[], i;
+  for(i=0;i<39;i++)types.push('t1');
+  for(i=0;i<154;i++)types.push('t2');
+  for(i=0;i<13;i++)types.push('ig');
+  var seed=11; function rnd(){seed=(seed*1664525+1013904223)%4294967296;return seed/4294967296}
+  for(i=types.length-1;i>0;i--){var j=Math.floor(rnd()*(i+1)),tmp=types[i];types[i]=types[j];types[j]=tmp}
+  var at={}; cells.slice(0,N).forEach(function(c,n){at[c.k]=types[n]});
+  var dots=document.getElementById('dots'), frag=document.createDocumentFragment();
+  for(i=0;i<cols*rows;i++){var d=document.createElement('i'); if(at[i]) d.className=at[i]; frag.appendChild(d)}
+  dots.appendChild(frag);
+
+  /* language */
+  var bz=document.getElementById('lang-zh'), be=document.getElementById('lang-en');
+  function setLang(l){
+    root.setAttribute('data-lang',l);
+    root.setAttribute('lang',l==='en'?'en':'zh-Hans');
+    bz.setAttribute('aria-pressed',String(l!=='en'));
+    be.setAttribute('aria-pressed',String(l==='en'));
+    try{localStorage.setItem('mktg-profile-lang',l)}catch(e){}
+    buildMail();
+  }
+  bz.addEventListener('click',function(){setLang('zh')});
+  be.addEventListener('click',function(){setLang('en')});
+
+  /* demo interests -> mailto link (a convenience; the address is also shown as text) */
+  var opts=[].slice.call(document.querySelectorAll('.opt'));
+  var link=document.getElementById('mail-link');
+  function buildMail(){
+    var en=root.getAttribute('data-lang')==='en';
+    var picked=opts.filter(function(o){return o.getAttribute('aria-pressed')==='true'})
+                   .map(function(o){return en?o.dataset.en:o.dataset.zh});
+    var subject=en?'Book a demo | MKTG Stories':'预约 Demo｜MKTG Stories';
+    var body=en
+      ?'Hi MKTG Stories,\n\nI would like to book a demo.\n\nBrand / company:\nName:\nWhat I would like to talk about: '+(picked.join(', ')||'')+'\nPreferred time:\n'
+      :'你好 MKTG Stories，\n\n我想预约一次 Demo。\n\n品牌 / 公司：\n姓名：\n想聊的内容：'+(picked.join('、')||'')+'\n方便的时间：\n';
+    link.setAttribute('href','mailto:'+EMAIL+'?subject='+encodeURIComponent(subject)+'&body='+encodeURIComponent(body));
+  }
+  opts.forEach(function(o){
+    o.addEventListener('click',function(){
+      o.setAttribute('aria-pressed',String(o.getAttribute('aria-pressed')!=='true'));
+      buildMail();
+    });
+  });
+
+  /* copy email */
+  var cb=document.getElementById('copy-btn'), addr=document.getElementById('mail-addr');
+  function selectAddr(){var r=document.createRange();r.selectNodeContents(addr);var s=window.getSelection();s.removeAllRanges();s.addRange(r)}
+  cb.addEventListener('click',function(){
+    var done=function(){
+      var en=root.getAttribute('data-lang')==='en';
+      var old=cb.innerHTML;
+      cb.textContent=en?'Copied':'已复制';
+      setTimeout(function(){cb.innerHTML=old},1800);
+    };
+    try{
+      navigator.clipboard.writeText(EMAIL).then(done,selectAddr);
+    }catch(e){selectAddr()}
+  });
+
+  var saved=null;
+  try{saved=localStorage.getItem('mktg-profile-lang')}catch(e){}
+  setLang(saved==='en'?'en':'zh');
+})();
+</script>
+
+</body>
+</html>
