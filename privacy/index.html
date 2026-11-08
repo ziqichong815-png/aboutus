@@ -1,17 +1,17 @@
 <!doctype html>
-<html lang="zh-Hans">
+<html lang="en" data-lang="en">
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
 <meta name="color-scheme" content="light">
-<title>隐私说明 | MKTG Stories 行销日志</title>
-<meta name="description" content="内容经营、内容制作、广告投递、网站制作：让人看到你、找到你，再选择你。">
+<title>Privacy notice | MKTG Stories</title>
+<meta name="description" content="How MKTG Stories uses the details you give us in the quote form.">
 <link rel="canonical" href="https://aboutus.mktg-stories.com/privacy/">
 <link rel="icon" type="image/png" href="../favicon.png">
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="MKTG Stories 行销日志">
-<meta property="og:title" content="Digital Marketing | MKTG Stories 行销日志">
-<meta property="og:description" content="内容经营、内容制作、广告投递、网站制作：让人看到你、找到你，再选择你。">
+<meta property="og:title" content="Privacy notice | MKTG Stories">
+<meta property="og:description" content="How MKTG Stories uses the details you give us in the quote form.">
 <meta property="og:url" content="https://aboutus.mktg-stories.com/digital-marketing/">
 <meta property="og:image" content="https://aboutus.mktg-stories.com/og.png">
 <meta name="twitter:card" content="summary_large_image">
@@ -667,6 +667,7 @@ footer.site{padding-block:clamp(56px,7vw,88px) 40px}
 .bh{padding-top:0}
 .bl{font-weight:700;color:var(--ink-2);font-size:14.5px}
 .tag{font-weight:800;font-size:13px;padding:5px 12px;border-radius:999px;justify-self:start}
+.bh .tag{border-radius:14px;line-height:1.25}.bh .tag small{display:block;font-size:11px;font-weight:700;opacity:.85}
 .tag.t1{background:var(--brand);color:#fff}.tag.t2{background:var(--butter)}
 .bv{display:grid;gap:6px}
 .bv b{font-size:clamp(18px,2.2vw,26px);font-weight:800;letter-spacing:-.02em;font-variant-numeric:tabular-nums}
@@ -845,7 +846,7 @@ footer.site{padding-block:clamp(56px,7vw,88px) 40px}
   function setLang(l){
     root.setAttribute('data-lang',l); root.setAttribute('lang',l==='en'?'en':'zh-Hans');
     bz.setAttribute('aria-pressed',String(l!=='en')); be.setAttribute('aria-pressed',String(l==='en'));
-    try{localStorage.setItem('mktg-profile-lang',l)}catch(e){}
+    try{localStorage.setItem('mktg-lang',l)}catch(e){}
     if(!link)return; var en=l==='en', subject=en?link.dataset.en:link.dataset.zh;
     var body=en?'Hi MKTG Stories,\n\nI would like to book a demo.\n\nBrand / company:\nName:\nPreferred time:\n':'你好 MKTG Stories，\n\n我想预约一次 Demo。\n\n品牌 / 公司：\n姓名：\n方便的时间：\n';
     link.setAttribute('href','mailto:'+EMAIL+'?subject='+encodeURIComponent(subject)+'&body='+encodeURIComponent(body));
@@ -857,8 +858,8 @@ footer.site{padding-block:clamp(56px,7vw,88px) 40px}
     var sel=function(){var r=document.createRange();r.selectNodeContents(addr);var s=window.getSelection();s.removeAllRanges();s.addRange(r)};
     try{navigator.clipboard.writeText(EMAIL).then(done,sel)}catch(e){sel()}
   });
-  var saved=null; try{saved=localStorage.getItem('mktg-profile-lang')}catch(e){}
-  setLang(saved==='en'?'en':'zh');
+  var saved=null; try{saved=localStorage.getItem('mktg-lang')}catch(e){}
+  setLang(saved==='zh'?'zh':'en');
   /* remember where the visitor came from (ads), for the health check */
   try{var qs=new URLSearchParams(location.search), src={};
     ['utm_source','utm_medium','utm_campaign','utm_term','utm_content','gclid'].forEach(function(k){if(qs.get(k))src[k]=qs.get(k)});

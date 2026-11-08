@@ -1,17 +1,17 @@
 <!doctype html>
-<html lang="zh-Hans">
+<html lang="en" data-lang="en">
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
 <meta name="color-scheme" content="light">
-<title>MKTG Stories 行销日志 | 数码营销 · 系统化运营 · Creators Platform</title>
-<meta name="description" content="MKTG Stories 行销日志是一家马来西亚的数码营销公司：内容经营、内容制作、广告投递、网站制作、KOC，系统化运营，以及 KOC 管理平台 Creators Platform，覆盖小红书、TikTok、LEMON8、Instagram。">
+<title>MKTG Stories | Digital Marketing · Systematic · Creators Platform</title>
+<meta name="description" content="MKTG Stories is a Malaysian digital marketing company: social media, content, paid ads, websites and KOC seeding, systematic operations, and Creators Platform for KOC campaigns, across Xiaohongshu, TikTok, LEMON8 and Instagram.">
 <link rel="canonical" href="https://aboutus.mktg-stories.com/">
 <link rel="icon" type="image/png" href="favicon.png">
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="MKTG Stories 行销日志">
-<meta property="og:title" content="MKTG Stories 行销日志 | 数码营销 · 系统化运营 · Creators Platform">
-<meta property="og:description" content="MKTG Stories 行销日志是一家马来西亚的数码营销公司：内容经营、内容制作、广告投递、网站制作、KOC，系统化运营，以及 KOC 管理平台 Creators Platform，覆盖小红书、TikTok、LEMON8、Instagram。">
+<meta property="og:title" content="MKTG Stories | Digital Marketing · Systematic · Creators Platform">
+<meta property="og:description" content="MKTG Stories is a Malaysian digital marketing company: social media, content, paid ads, websites and KOC seeding, systematic operations, and Creators Platform for KOC campaigns, across Xiaohongshu, TikTok, LEMON8 and Instagram.">
 <meta property="og:url" content="https://aboutus.mktg-stories.com/">
 <meta property="og:image" content="https://aboutus.mktg-stories.com/og.png">
 <meta property="og:image:width" content="1200">
@@ -660,8 +660,8 @@ footer.site{padding-block:clamp(56px,7vw,88px) 40px}
       <div class="dots-card">
         <div class="dots" id="dots" role="img" aria-label="206 creators: 39 Tier 1 KOCs, 154 Tier 2 KOCs, 13 Instagram KOLs"></div>
         <div class="legend">
-          <span><i class="t1"></i>Tier 1 KOC · 39</span>
-          <span><i class="t2"></i>Tier 2 KOC · 154</span>
+          <span><i class="t1"></i>Tier 1 KOC <small>(10K+)</small> · 39</span>
+          <span><i class="t2"></i>Tier 2 KOC <small>(1K–10K)</small> · 154</span>
           <span><i class="ig"></i>Instagram KOL · 13</span>
         </div>
         <p class="dots-note"><span class="z">来源：Creators Platform 博主库与合作记录，截至 2026.10.15。</span><span class="e">Source: Creators Platform creator database and collaboration log, as of 15 Oct 2026.</span></p>
@@ -818,7 +818,7 @@ footer.site{padding-block:clamp(56px,7vw,88px) 40px}
     root.setAttribute('lang',l==='en'?'en':'zh-Hans');
     bz.setAttribute('aria-pressed',String(l!=='en'));
     be.setAttribute('aria-pressed',String(l==='en'));
-    try{localStorage.setItem('mktg-profile-lang',l)}catch(e){}
+    try{localStorage.setItem('mktg-lang',l)}catch(e){}
     buildMail();
   }
   bz.addEventListener('click',function(){setLang('zh')});
@@ -860,8 +860,8 @@ footer.site{padding-block:clamp(56px,7vw,88px) 40px}
   });
 
   var saved=null;
-  try{saved=localStorage.getItem('mktg-profile-lang')}catch(e){}
-  setLang(saved==='en'?'en':'zh');
+  try{saved=localStorage.getItem('mktg-lang')}catch(e){}
+  setLang(saved==='zh'?'zh':'en');
 })();
 </script>
 
