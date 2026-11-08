@@ -1,0 +1,472 @@
+<!doctype html>
+<html lang="zh-Hans">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="color-scheme" content="light">
+<title>Creators Platform by MKTG Stories | 行销日志</title>
+<meta name="description" content="Creators Platform by MKTG Stories：每一档 KOC campaign 都在同一个平台上。档期与创意、执行、结案报告，品牌随时登录看进度和成效。">
+<link rel="canonical" href="https://aboutus.mktg-stories.com/creators-platform/">
+<link rel="icon" type="image/png" href="../favicon.png">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="MKTG Stories 行销日志">
+<meta property="og:title" content="Creators Platform by MKTG Stories | 行销日志">
+<meta property="og:description" content="Creators Platform by MKTG Stories：每一档 KOC campaign 都在同一个平台上。档期与创意、执行、结案报告，品牌随时登录看进度和成效。">
+<meta property="og:url" content="https://aboutus.mktg-stories.com/creators-platform/">
+<meta property="og:image" content="https://aboutus.mktg-stories.com/og.png">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@500;600;700;800&family=Noto+Sans+SC:wght@400;500;700;900&display=swap">
+<style>
+/* Layout: bright single-theme page. Peach hero with a drawn creator scene and floating number chips
+   → orange word band → Who We Are (pastel three-beat tagline) → highlighted statement →
+   three service rows, each with its own illustration → platforms → creator network dot grid →
+   systematic operations (capabilities + an example panel) → butter demo CTA → contact.
+   Warm white, peach, butter, mint, sky; orange only as the accent; text in soft brown, not black. */
+:root{
+  --bg:#FFF9F3; --card:#FFFFFF; --peach:#FFE6D5; --butter:#FFF0BE; --mint:#E6F6EE; --sky:#E4F2FF; --pink:#FFE3E9;
+  --ink:#3A2E27; --ink-2:#6A5A50; --muted:#7A6A5F; --line:#F1E2D5; --line-2:#EBD5C3;
+  --brand:#F36130; --brand-ink:#C8421A; --on-brand:#2B1E16; --sun:#FFC83D; --soft-orange:#FFB48F;
+  --r-xl:32px; --r-lg:24px; --r-md:18px; --r-sm:12px;
+  --sh-1:0 1px 2px rgba(120,70,30,.05),0 12px 30px -16px rgba(120,70,30,.25);
+  --sh-2:0 2px 6px rgba(120,70,30,.06),0 28px 50px -24px rgba(120,70,30,.35);
+  --gut:clamp(16px,3.6vw,36px);
+  --f-lat:"Plus Jakarta Sans","Noto Sans SC","PingFang SC","Microsoft YaHei",system-ui,sans-serif;
+  --f-mono:ui-monospace,Menlo,Consolas,monospace;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth;scroll-padding-top:80px}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}*{animation:none!important;transition:none!important}}
+body{margin:0;background:var(--bg);color:var(--ink);font-family:var(--f-lat);font-size:16px;line-height:1.65;-webkit-font-smoothing:antialiased;overflow-x:hidden}
+h1,h2,h3,h4{margin:0;text-wrap:balance;letter-spacing:-.02em;line-height:1.12}
+p{margin:0}
+ul,ol{margin:0;padding:0;list-style:none}
+a{color:inherit}
+button{font:inherit;color:inherit;cursor:pointer}
+:focus-visible{outline:2.5px solid var(--brand);outline-offset:2px;border-radius:8px}
+img,svg{max-width:100%}
+
+/* language switch: Chinese is the default */
+:root[data-lang="en"] .z{display:none!important}
+:root:not([data-lang="en"]) .e{display:none!important}
+
+.page{max-width:1200px;margin:0 auto;padding-inline:var(--gut)}
+.sec{padding-block:clamp(64px,9vw,112px)}
+.eyebrow{font-size:12px;font-weight:800;letter-spacing:.16em;text-transform:uppercase;color:var(--brand-ink)}
+.h2{font-size:clamp(30px,4.6vw,54px);font-weight:800;margin-top:14px;max-width:20em}
+.h2,.hero h1,.cta h2,.state p,.srow .pitch{word-break:keep-all;overflow-wrap:break-word}
+.lead{font-size:clamp(16px,1.7vw,19px);color:var(--ink-2);max-width:40em;margin-top:18px}
+.ico{width:22px;height:22px;flex:none;stroke:currentColor;fill:none;stroke-width:1.9;stroke-linecap:round;stroke-linejoin:round}
+
+/* buttons */
+.btn{display:inline-flex;align-items:center;gap:8px;min-height:48px;padding:0 24px;border-radius:999px;border:0;font-weight:700;font-size:15px;text-decoration:none;white-space:nowrap;transition:transform .15s ease}
+.btn:hover{transform:translateY(-1px)}
+.btn-brand{background:var(--brand);color:var(--on-brand)}
+.btn-white{background:#fff;color:var(--ink);box-shadow:var(--sh-1)}
+.btn-sm{min-height:40px;padding:0 18px;font-size:14px}
+
+/* top bar */
+.bar{position:sticky;top:env(safe-area-inset-top,0px);z-index:30;background:rgba(255,249,243,.9);backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);border-bottom:1px solid var(--line)}
+.bar-in{display:flex;align-items:center;gap:20px;min-height:66px}
+.brand{display:flex;align-items:center;gap:10px;text-decoration:none;min-width:0}
+.brand-mark{display:grid;place-items:center;width:40px;height:40px;border-radius:13px;background:var(--brand);flex:none}
+.brand-mark img{height:27px;width:auto;display:block}
+.brand-name{font-weight:800;font-size:15px;line-height:1.1;white-space:nowrap}
+.brand-name small{display:block;font-weight:500;font-size:11px;color:var(--muted);letter-spacing:.02em}
+.nav{display:flex;gap:2px;margin-left:auto}
+.nav a{padding:8px 12px;border-radius:999px;font-size:14px;font-weight:600;color:var(--ink-2);text-decoration:none}
+.nav a:hover{background:var(--peach);color:var(--ink)}
+.lang{display:inline-flex;padding:3px;border-radius:999px;background:#fff;border:1px solid var(--line-2)}
+.lang button{border:0;background:transparent;padding:5px 11px;border-radius:999px;font-size:13px;font-weight:700;color:var(--muted)}
+.lang button[aria-pressed="true"]{background:var(--brand);color:var(--on-brand)}
+@media (max-width:1000px){.nav{display:none}.lang{margin-left:auto}}
+@media (max-width:480px){.brand-name small{display:none}.bar-in{gap:10px}}
+
+/* hero */
+.hero{background:var(--peach);overflow:hidden}
+.hero-in{display:grid;grid-template-columns:minmax(0,1.05fr) minmax(0,1fr);gap:clamp(24px,5vw,64px);align-items:center;padding-block:clamp(40px,6vw,88px) clamp(36px,5vw,64px)}
+.hero-tag{display:inline-flex;padding:6px 14px;border-radius:999px;background:#fff;font-size:12.5px;font-weight:800;letter-spacing:.08em;color:var(--brand-ink)}
+.hero h1{font-size:clamp(34px,4.6vw,58px);font-weight:800;margin-top:22px;line-height:1.06;max-width:11em}
+.hero h1 em{font-style:normal;color:var(--brand-ink)}
+.hero p.sub{font-size:clamp(16px,1.8vw,19px);margin-top:22px;max-width:34em;color:var(--ink-2)}
+.hero-cta{display:flex;flex-wrap:wrap;gap:12px;margin-top:28px}
+.hero-plat{display:flex;flex-wrap:wrap;gap:8px;margin-top:26px}
+.hero-plat span{padding:5px 13px;border-radius:999px;background:#fff;font-size:13px;font-weight:700;color:var(--ink-2)}
+.hero-art{position:relative}
+.hero-art svg{display:block;width:100%;height:auto}
+.chipf{position:absolute;display:flex;align-items:center;gap:10px;padding:10px 16px;border-radius:18px;background:#fff;box-shadow:var(--sh-2);font-weight:800;line-height:1.1}
+.chipf b{font-size:clamp(20px,2.4vw,28px);letter-spacing:-.03em;color:var(--brand-ink)}
+.chipf span.l{font-size:12px;font-weight:600;color:var(--muted);line-height:1.25}
+.chipf.a{left:0;top:50%}
+.chipf.b{left:38%;top:1%}
+@media (max-width:860px){.hero-in{grid-template-columns:1fr}.hero-art{max-width:520px}}
+
+/* word band (pausable) */
+.marq{position:relative;background:var(--brand);color:#fff;overflow:hidden;white-space:nowrap;padding-block:clamp(8px,1.4vw,16px)}
+.marq-track{display:inline-flex;animation:marq 42s linear infinite;will-change:transform}
+.marq.paused .marq-track{animation-play-state:paused}
+.marq-set{display:inline-block;padding-right:.8em;font-size:clamp(30px,5.4vw,70px);font-weight:800;letter-spacing:-.02em;line-height:1.15}
+.marq-btn{position:absolute;right:var(--gut);bottom:10px;width:32px;height:32px;border-radius:50%;border:0;background:#fff;color:var(--brand-ink);display:grid;place-items:center;z-index:2}
+.marq-btn .ico{width:13px;height:13px;fill:currentColor;stroke:none}
+.marq-btn .play{display:none}
+.marq.paused .marq-btn .play{display:block}
+.marq.paused .marq-btn .pause{display:none}
+@keyframes marq{to{transform:translateX(-50%)}}
+@media (prefers-reduced-motion:reduce){.marq{white-space:normal}.marq-track{display:block}.marq-set+.marq-set{display:none}.marq-btn{display:none}}
+
+/* who we are */
+.who{display:grid;grid-template-columns:minmax(0,.9fr) minmax(0,1.1fr);gap:clamp(32px,6vw,96px);align-items:center}
+.beats{display:grid;gap:12px;justify-items:start}
+.beat{display:inline-block;padding:.04em .4em .08em;border-radius:.55em;font-size:clamp(44px,8vw,96px);font-weight:800;line-height:1.1;letter-spacing:-.03em}
+.beat:nth-child(1){background:var(--peach)}
+.beat:nth-child(2){background:var(--butter);margin-left:clamp(12px,3vw,44px)}
+.beat:nth-child(3){background:var(--sky);margin-left:clamp(24px,6vw,88px)}
+.who .body{display:grid;gap:16px;color:var(--ink-2);max-width:34em}
+.who .body p.big{font-size:clamp(18px,2vw,21px);font-weight:600;color:var(--ink)}
+.principles{margin-top:24px;display:grid;gap:12px}
+.principles li{display:grid;grid-template-columns:auto 1fr;gap:2px 14px;padding:16px 18px;border-radius:var(--r-md);background:#fff;box-shadow:var(--sh-1)}
+.principles .ico-box{grid-row:span 2;display:grid;place-items:center;width:40px;height:40px;border-radius:12px;color:var(--ink)}
+.principles li:nth-child(1) .ico-box{background:var(--peach)}
+.principles li:nth-child(2) .ico-box{background:var(--butter)}
+.principles li:nth-child(3) .ico-box{background:var(--sky)}
+.principles li>b{font-size:15.5px;font-weight:800;color:var(--ink)}
+.principles li>span{font-size:14px;color:var(--ink-2)}
+@media (max-width:880px){.who{grid-template-columns:1fr}}
+
+/* statement */
+.band-butter{background:var(--butter)}
+.state{display:grid;grid-template-columns:minmax(0,1fr) auto;gap:32px;align-items:center}
+.state p{font-size:clamp(25px,3.6vw,46px);font-weight:700;line-height:1.38;letter-spacing:-.02em;color:var(--ink);max-width:25em}
+.state mark{background:var(--brand);color:var(--on-brand);padding:.04em .22em;border-radius:.2em;-webkit-box-decoration-break:clone;box-decoration-break:clone}
+.chev{width:clamp(48px,8vw,100px);height:auto;color:var(--brand);fill:currentColor}
+@media (max-width:760px){.state{grid-template-columns:1fr}.chev{display:none}}
+
+/* services */
+.srows{margin-top:44px;display:grid;gap:clamp(28px,4vw,48px)}
+.srow{display:grid;grid-template-columns:minmax(0,1.05fr) minmax(0,1fr);gap:clamp(20px,4vw,64px);align-items:center;padding:clamp(20px,3vw,36px);border-radius:var(--r-xl);background:#fff;box-shadow:var(--sh-1)}
+.srow.flip .art{order:-1}
+.srow h3{font-size:clamp(34px,5vw,64px);font-weight:800;line-height:1.03;letter-spacing:-.035em}
+.srow .sub{display:block;margin-top:12px;font-size:14.5px;font-weight:700;color:var(--brand-ink)}
+.srow .pitch{margin-top:18px;font-size:clamp(17px,1.8vw,20px);font-weight:700}
+.srow ul{margin-top:16px;display:grid;gap:14px}
+.srow .more{margin-top:22px}
+.srow li{display:grid;grid-template-columns:104px minmax(0,1fr);gap:4px 14px}
+.srow li>b{font-size:14.5px;font-weight:800;color:var(--ink)}
+.srow li>span{font-size:14.5px;color:var(--ink-2)}
+.art{border-radius:var(--r-lg);padding:clamp(10px,2vw,22px);display:grid;place-items:center}
+.art svg{display:block;width:100%;height:auto}
+.art.peach{background:var(--peach)}
+.art.sky{background:var(--sky)}
+.art.butter{background:var(--butter)}
+@media (max-width:860px){.srow{grid-template-columns:1fr}.srow.flip .art{order:0}.art{order:-1}}
+@media (max-width:480px){.srow li{grid-template-columns:1fr}}
+
+/* platforms */
+.band-mint{background:var(--mint)}
+.pgrid{margin-top:44px;display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:16px}
+.prow{display:flex;flex-direction:column;gap:10px;padding:24px;border-radius:var(--r-lg);background:#fff;box-shadow:var(--sh-1);min-width:0}
+.pico{display:grid;place-items:center;width:52px;height:52px;border-radius:16px;color:var(--ink)}
+.pico .ico{width:26px;height:26px}
+.prow h3{display:flex;align-items:baseline;gap:8px;flex-wrap:wrap;font-size:clamp(22px,2.2vw,28px);font-weight:800;margin-top:4px}
+.prow h3 small{font-size:12.5px;font-weight:600;color:var(--muted)}
+.core-tag{font-size:11px;font-weight:800;letter-spacing:.08em;padding:3px 10px;border-radius:999px;background:var(--brand);color:var(--on-brand);white-space:nowrap;align-self:center}
+.prow p{font-size:14.5px;color:var(--ink-2)}
+.tags{display:flex;flex-wrap:wrap;gap:6px;margin-top:auto;padding-top:6px}
+.tags>span{font-size:12.5px;font-weight:600;padding:4px 11px;border-radius:999px;background:var(--bg);border:1px solid var(--line-2);color:var(--ink-2)}
+@media (max-width:980px){.pgrid{grid-template-columns:1fr 1fr}}
+@media (max-width:620px){.pgrid{grid-template-columns:1fr}}
+
+/* creator network */
+.net{display:grid;grid-template-columns:minmax(0,1.05fr) minmax(0,1fr);gap:clamp(32px,6vw,96px);align-items:start;margin-top:48px}
+.dots-card{background:#fff;border-radius:var(--r-xl);padding:clamp(20px,3vw,36px);box-shadow:var(--sh-1)}
+.dots{display:grid;grid-template-columns:repeat(20,1fr);gap:clamp(3px,.7vw,8px);max-width:560px;margin:0 auto}
+.dots i{display:block;aspect-ratio:1;border-radius:50%}
+.dots i.t1{background:var(--brand)}
+.dots i.t2{background:var(--soft-orange)}
+.dots i.ig{background:transparent;box-shadow:inset 0 0 0 2.5px var(--brand)}
+.legend{display:flex;flex-wrap:wrap;gap:8px 22px;margin-top:22px;font-size:13px;font-weight:600;color:var(--ink-2);justify-content:center}
+.legend i{display:inline-block;width:12px;height:12px;border-radius:50%;vertical-align:-1px;margin-right:7px}
+.legend i.t1{background:var(--brand)}
+.legend i.t2{background:var(--soft-orange)}
+.legend i.ig{box-shadow:inset 0 0 0 2.5px var(--brand)}
+.dots-note{margin-top:12px;font-size:12px;color:var(--muted);text-align:center}
+.slines{display:grid;gap:14px}
+.sline{padding:20px 24px;border-radius:var(--r-lg)}
+.sline:nth-child(1){background:var(--peach)}
+.sline:nth-child(2){background:var(--butter)}
+.sline:nth-child(3){background:var(--sky)}
+.sline small{display:block;font-size:12.5px;font-weight:800;letter-spacing:.08em;color:var(--ink-2)}
+.sline .big{display:block;margin-top:4px;font-size:clamp(38px,5.4vw,64px);font-weight:800;letter-spacing:-.04em;line-height:1.05;font-variant-numeric:tabular-nums;color:var(--brand-ink)}
+.sline .big em{font-style:normal;font-size:.36em;font-weight:700;letter-spacing:0;color:var(--ink-2);margin-left:10px}
+.src{margin-top:14px;font-size:11.5px;line-height:1.5;color:var(--muted)}
+@media (max-width:880px){.net{grid-template-columns:1fr}}
+
+/* systems */
+.band-sky{background:var(--sky)}
+.sys{display:grid;grid-template-columns:minmax(0,1.1fr) minmax(0,1fr);gap:clamp(24px,4vw,56px);align-items:start;margin-top:44px}
+.caps{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+.cap{padding:22px;border-radius:var(--r-lg);background:#fff;box-shadow:var(--sh-1)}
+.cap .ico-box{display:grid;place-items:center;width:46px;height:46px;border-radius:14px;color:var(--ink)}
+.cap h3{margin-top:14px;font-size:18px;font-weight:800}
+.cap p{margin-top:6px;font-size:14px;color:var(--ink-2)}
+.cap:nth-child(1) .ico-box{background:var(--peach)}
+.cap:nth-child(2) .ico-box{background:var(--butter)}
+.cap:nth-child(3) .ico-box{background:var(--mint)}
+.cap:nth-child(4) .ico-box{background:var(--pink)}
+.ex{background:#fff;border-radius:var(--r-xl);padding:clamp(20px,2.6vw,30px);box-shadow:var(--sh-2)}
+.ex-h{display:flex;justify-content:space-between;align-items:flex-start;gap:12px;flex-wrap:wrap}
+.ex-h b{font-size:16px}
+.ex-h small{display:block;font-size:12.5px;color:var(--muted);margin-top:2px}
+.chip{display:inline-block;font-size:12px;font-weight:700;padding:4px 12px;border-radius:999px;background:var(--peach);color:var(--brand-ink);white-space:nowrap}
+.tl{margin-top:18px;display:grid;gap:0;position:relative}
+.tl li{display:grid;grid-template-columns:70px 1fr;gap:14px;padding-bottom:18px;position:relative}
+.tl li::before{content:"";position:absolute;left:70px;top:8px;bottom:-8px;width:2px;background:var(--line);transform:translateX(6px)}
+.tl li::after{content:"";position:absolute;left:70px;top:6px;width:10px;height:10px;border-radius:50%;background:var(--brand);transform:translateX(3px);box-shadow:0 0 0 4px #fff}
+.tl li:last-child::before{display:none}
+.tl .d{font-family:var(--f-mono);font-size:12.5px;color:var(--muted);padding-top:2px}
+.tl .t{padding-left:20px;min-width:0}
+.tl .t b{display:block;font-size:15px;font-weight:800;line-height:1.35}
+.next{margin-top:4px;padding:14px 16px;border-radius:var(--r-md);background:var(--butter)}
+.next-h{display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap;font-size:13.5px;font-weight:700}
+.next-h .mono{color:var(--ink-2);font-weight:500;font-size:12.5px;font-family:var(--f-mono)}
+.track{height:10px;border-radius:999px;background:#fff;margin-top:10px;overflow:hidden}
+.track i{display:block;height:100%;border-radius:999px;background:var(--brand)}
+.exchips{display:flex;flex-wrap:wrap;gap:6px;margin-top:16px}
+.exchips>span{font-size:12.5px;font-weight:600;padding:4px 11px;border-radius:999px;background:var(--bg);border:1px solid var(--line-2);color:var(--ink-2)}
+@media (max-width:980px){.sys{grid-template-columns:1fr}}
+@media (max-width:560px){.caps{grid-template-columns:1fr}}
+
+/* call to action */
+.ctaband{background:var(--butter)}
+.cta{display:grid;grid-template-columns:minmax(0,1.1fr) minmax(0,1fr);gap:clamp(28px,4vw,64px);align-items:center}
+.cta h2{font-size:clamp(34px,5.4vw,66px);font-weight:800;line-height:1.06}
+.cta .lead{margin-top:18px}
+.cta ul{display:grid;gap:12px;margin-top:24px}
+.cta li{display:flex;gap:12px;font-weight:600;font-size:15.5px;line-height:1.45}
+.cta li .tick{display:grid;place-items:center;width:24px;height:24px;border-radius:50%;background:var(--brand);color:var(--on-brand);flex:none;margin-top:1px}
+.cta li .tick .ico{width:14px;height:14px;stroke-width:2.6}
+.cta-card{background:#fff;border-radius:var(--r-lg);padding:clamp(20px,2.6vw,30px);box-shadow:var(--sh-2)}
+.cta-card h3{font-size:19px;font-weight:800}
+.cta-card .hint{font-size:13.5px;color:var(--muted);margin-top:4px}
+.opts{display:flex;flex-wrap:wrap;gap:8px;margin-top:18px}
+.opt{padding:8px 16px;border-radius:999px;border:1.5px solid var(--line-2);background:#fff;font-size:14px;font-weight:700;color:var(--ink-2)}
+.opt[aria-pressed="true"]{background:var(--brand);border-color:var(--brand);color:var(--on-brand)}
+.mail{display:flex;align-items:center;gap:10px;margin-top:22px;padding:6px 6px 6px 16px;border-radius:999px;background:var(--bg);border:1px solid var(--line-2)}
+.mail code{flex:1;min-width:0;font-family:var(--f-mono);font-size:14px;font-weight:500;overflow-wrap:anywhere;user-select:all}
+.cta-act{display:flex;flex-wrap:wrap;gap:10px;margin-top:14px}
+.cta-act .btn{flex:1 1 auto;justify-content:center}
+.fine{margin-top:14px;font-size:12.5px;color:var(--muted);line-height:1.5}
+@media (max-width:900px){.cta{grid-template-columns:1fr}}
+
+/* contact */
+footer.site{padding-block:clamp(56px,7vw,88px) 40px}
+.contact{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:16px;margin-top:36px}
+.cbox{padding:22px 24px;border-radius:var(--r-lg);background:#fff;box-shadow:var(--sh-1)}
+.contact small{display:block;font-size:12.5px;font-weight:800;letter-spacing:.08em;color:var(--muted)}
+.contact b{display:block;margin-top:8px;font-size:clamp(18px,2vw,22px);font-weight:800;line-height:1.35;overflow-wrap:anywhere}
+.fine-print{margin-top:40px;display:flex;flex-wrap:wrap;gap:12px 24px;justify-content:space-between;font-size:13px;color:var(--muted)}
+@media (max-width:760px){.contact{grid-template-columns:1fr}}
+
+/* service landing pages */
+.crumbs{font-size:13.5px;font-weight:700;color:var(--muted);display:flex;gap:8px;flex-wrap:wrap;align-items:center}
+.crumbs a{color:var(--brand-ink);text-decoration:none}
+.svc-hero{padding-block:clamp(36px,6vw,80px) clamp(28px,5vw,64px)}
+.peach-bg{background:linear-gradient(180deg,var(--peach),var(--bg))}.sky-bg{background:linear-gradient(180deg,var(--sky),var(--bg))}.butter-bg{background:linear-gradient(180deg,var(--butter),var(--bg))}
+.svc-hero .page{display:grid;grid-template-columns:minmax(0,1.05fr) minmax(0,1fr);gap:clamp(20px,4vw,56px);align-items:center}
+.svc-hero h1{font-size:clamp(34px,5.4vw,64px);font-weight:800;line-height:1.06;letter-spacing:-.035em;margin-top:14px;word-break:keep-all}
+.svc-hero .lead{margin-top:18px;font-size:clamp(16px,1.6vw,19px);color:var(--ink-2);max-width:56ch;line-height:1.65}
+.svc-hero .acts{display:flex;gap:10px;flex-wrap:wrap;margin-top:26px}
+.svc-chips{display:flex;gap:8px;flex-wrap:wrap;margin-top:22px}
+.svc-chips span{background:#fff;border:1px solid var(--line-2);border-radius:999px;padding:6px 12px;font-size:13px;font-weight:700}
+.svc-sec{padding-block:clamp(36px,5vw,72px)}
+.cards3{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:16px;margin-top:26px}
+.c3{background:#fff;border-radius:var(--r-lg);padding:22px;box-shadow:var(--sh-1);display:grid;gap:8px;align-content:start}
+.c3 b{font-size:17px}.c3 p{color:var(--ink-2);font-size:14.5px;line-height:1.6;margin:0}
+.blocks{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:16px;margin-top:26px}
+.blk{background:#fff;border-radius:var(--r-lg);padding:24px;box-shadow:var(--sh-1)}
+.blk h3{font-size:21px;font-weight:800;letter-spacing:-.01em}
+.blk ul{margin:14px 0 0;padding:0;list-style:none;display:grid;gap:10px}
+.blk li{display:grid;grid-template-columns:auto minmax(0,1fr);gap:10px;font-size:14.5px;line-height:1.55;color:var(--ink-2)}
+.blk li::before{content:"";width:8px;height:8px;border-radius:50%;background:var(--brand);margin-top:7px}
+.steps{list-style:none;margin:26px 0 0;padding:0;display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:16px;counter-reset:s}
+.steps li{counter-increment:s;background:#fff;border-radius:var(--r-lg);padding:22px;box-shadow:var(--sh-1);display:grid;gap:6px;align-content:start}
+.steps li::before{content:counter(s,decimal-leading-zero);font-weight:800;font-size:13px;color:var(--brand-ink);letter-spacing:.06em}
+.steps b{font-size:16.5px}.steps p{margin:0;color:var(--ink-2);font-size:14px;line-height:1.6}
+.get{display:flex;flex-wrap:wrap;gap:10px;margin-top:22px}
+.get span{background:var(--butter);border-radius:999px;padding:10px 16px;font-weight:700;font-size:14.5px}
+.band{border-radius:var(--r-xl);padding:clamp(22px,3.5vw,40px);display:grid;grid-template-columns:minmax(0,1.2fr) minmax(0,1fr);gap:20px 36px;align-items:center}
+.band.mint{background:var(--mint)}.band.sky{background:var(--sky)}.band.peach{background:var(--peach)}.band.butter{background:var(--butter)}
+.band h3{font-size:clamp(22px,2.6vw,30px);font-weight:800;letter-spacing:-.02em}
+.band p{margin:10px 0 0;color:var(--ink-2);line-height:1.65}
+.band ul{margin:0;padding:0;list-style:none;display:grid;gap:10px}
+.band li{background:#fff;border-radius:14px;padding:12px 14px;font-size:14.5px;font-weight:600}
+.stats3{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px;margin-top:22px}
+.stats3 div{background:#fff;border-radius:var(--r-md);padding:16px;box-shadow:var(--sh-1)}
+.stats3 b{display:block;font-size:clamp(26px,3vw,36px);font-weight:800;letter-spacing:-.02em;color:var(--brand-ink)}
+.stats3 small{font-size:13px;color:var(--muted);font-weight:700}
+.stat-src{font-size:12.5px;color:var(--muted);margin-top:10px}
+.faq{display:grid;gap:10px;margin-top:22px;max-width:860px}
+.faq details{background:#fff;border-radius:var(--r-md);padding:16px 20px;box-shadow:var(--sh-1)}
+.faq summary{cursor:pointer;font-weight:800;font-size:16px;list-style:none;display:flex;justify-content:space-between;gap:12px}
+.faq summary::-webkit-details-marker{display:none}
+.faq summary::after{content:"+";color:var(--brand-ink);font-size:20px;line-height:1}
+.faq details[open] summary::after{content:"–"}
+.faq p{margin:10px 0 0;color:var(--ink-2);line-height:1.65}
+.svc-cta{background:var(--butter);border-radius:var(--r-xl);padding:clamp(24px,4vw,48px);text-align:center;display:grid;gap:14px;justify-items:center}
+.svc-cta h2{font-size:clamp(26px,3.6vw,42px);font-weight:800;letter-spacing:-.03em}
+.svc-cta .mail{display:flex;gap:8px;align-items:center;flex-wrap:wrap;justify-content:center}
+.svc-cta code{background:#fff;border-radius:999px;padding:10px 16px;font-weight:700;font-family:var(--f-lat)}
+.others{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px;margin-top:20px}
+.others a{background:#fff;border-radius:var(--r-lg);padding:20px 22px;box-shadow:var(--sh-1);text-decoration:none;color:var(--ink);display:grid;gap:4px}
+.others a b{font-size:19px}.others a span{color:var(--muted);font-size:14px}
+.others a:hover{box-shadow:var(--sh-2)}
+@media (max-width:900px){.svc-hero .page,.band{grid-template-columns:minmax(0,1fr)}.steps{grid-template-columns:repeat(2,minmax(0,1fr))}.cards3{grid-template-columns:minmax(0,1fr)}}
+@media (max-width:560px){.steps,.others,.stats3{grid-template-columns:minmax(0,1fr)}}
+</style>
+</head>
+<body>
+<header class="bar"><div class="page bar-in">
+    <a class="brand" href="https://aboutus.mktg-stories.com/" aria-label="MKTG Stories"><span class="brand-mark"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAANYAAADwCAYAAAB8FpoFAAAhSUlEQVR42u2df5RkVXXvP/tWdTfzm4EBFAzCID9UQAlREY1CjCHPCL4oQqIPXeqLiUaCYoIKJoghEBONycozPFkLliL46xliIFGIIqhPfRpUlsADYfgtwsDM9PzomZ7urro7f9x9hsOdW93149btqpr9Xaupoeqec8/Z5+yz99lnn72FHqGqQp8hIhq9q87oIxWR5mKMQaD1oKGf8yw3v0qpS3A4+ssMvcwxHVRGXwj1HoiWiEiqqpcCLwVmgaTMcbH6tgJniciUqu4DvGeUJZX1+YcicmOg8QL0fzHwMaDRwyRWoAY8CrwT2Gl1aTcrtqrWTOJ+Fnhl1K9O6fBt4C3W33OA1wMzJc2zFBgHviciF9g7LgOOAuY6fEeg33rgTSKivahVYRBPBF7Rx8k2YwQA2A+4aA9Y7K8EbrTBSheg/zOAk0p67+Omhmo3TFWAA4GDeywf8II+zbOYvq8EnttDXZvCglTGfmU70LS/WskSS0xihUFu2GoyqmiYFrGlgzJzRvu0h5U80HoncICqbrO6tIvFdioao1lrV6dzIzw/G303bd83Stpnh3dsj76b6nIuB9pv61kVjJBEjegHY9VyAzc2wowVjDO1DsvU7LNXFenZwO1dSqsw4c8VkSujtiWRWt/pNkAK5pmWOM9quXZ1O5dDP5MyGcsxWoy9ssc69nIyOmM5iqVFL2ps6iSMGEtVkw7Fda0Ec6pjMKVWt+V8LuQZy8y6aYcrFKo652R0OHKMFZ2HvBY4hc4sIk3ghdHGz+FwmMRKTFK9it4OX10NcDgKjBdTpt51ek5Qc6ZyOFozVhL9v1sLHQ56O9x1OBzOWA6HM5bD4YzlcDicsRwOZyyHwxnL4XA4YzkczlgOhzOWw+FgCC46ahfPqg/TQF1onK++fBAabfG9jBj9dutjfYAv0YVnx/o8IQZtsLSiPpY9uccKYkXUozgejPCF0Fp+rlbd4e1k0XbaiQAUAopMRs+O+i3VsRaLST+ww/6Skhi5CUxYnQGTwGayqE0hlNsSYNkIjFU8l1Pr34aqGSuEhzob+HqbsRFClKaULAQawMPAcSMusQR4kuiWdhtlQvgz7SDs1weB/1NinIoQPWlT9N27gKXROxvAb5HFTZzvQm2zIOZfFWhGfwvN5XOB64x+TfuuEQKsVi2x1ovI4z3ExZ4BbttTNkFthlcetwna7q3v8NzmXsaizfZvyjEaqrqxjfaG31ZUTPJVHbRtXvpVzVhjUWKDZjfxuy3ozcgbFtpgqvD7o8DXImnXrvbwqI1FrWTJoLkkAxJZoJsmjb+2QIDR8NutqipVxG+3tt4I3LdA2wKdHyug366+1xdjwqhq2iomeUFnw4Cwh0WF0gWkQWqftwK/0+Vkqvfh2CVWSfNBN2si8qNO2quqE6ra7OfRkNGhJiLnlEC/xkDeFI6YSUSkEUs2Ww2aOMpS1Rp9rr9ZQh0zNi+m+9TMWaNDo0z61QeIoQIzNSMJtQL4deAWEdmhqvsBf8JoZxupA/9PRK5fINuImPQ/GHhtB6pgP8+xEuDbInKnjefvAgdYv+K2SYd1zgIvLlm6hjYcparvNLprh23L17cNuDqfbaTVYV6Z5zNFzJQAzTCBVHWCLC3QGcDrgH2Bg8jMuM8EPrwHCJOrgOsjUy4tvGaaZFbSTw1Q298H3GntuwQ4gsH0Fgr1HAV8uqQ6p4Br8tlGxvqYdCBYUpKw4dNsyd0VJFRVjwfeAJwKHB2V3RCpf12JbIYv28hUJ6qMlUsX2UUttH1HLq1No6RMNEmf+lfG9iLQ/slYFQyVXg7cZP8vfTr8/Intk2aNmQ4D/jtZQrETIsJpNFDxBnhPSJVa73ACSXQWlQxY22uR90WNwc7wUgZj7aqnvitnqsh9ZKbGfu+lDgJ+26TTq3gqqRwRUyfRgDgcQ50UQUpa8YKEmYvOM1YCvwmcDrwaWJNTIZIBX9Ucjq6TInSta+aMEM3o/OFE4I3AaWaAyLusJB4c1OHXRorPm4qMEK+zvdMxLZjJJZPDGatIXcydNx1OZs07g+y8QXIWF2cmhzNWm8x0oO2XzrD903xGCIfDGWseT4jlZJa837dPN0I4HAsxVgtPiHGyM6Yzbe/kRgiHoxPGyhkhfpWnPCHcCOFwdMpYkUPnWpNKZ5iUwo0QDkd3OYhrItJU1XcBnySLW+BGCIeD3r0kANYaU+2MLqvVPPagw9HbHmvGmKnuzORwlMdYe9K1dwdDfyF0oKNA+77J4aHRnbEcDgAeIYs1KR3edg/PLwUO7SKcgTMWe1YM9qIbxLUKVPtmNLEbFQTZDH18j4hc14MD+YnA96IIts5YDooCdi7WONYK5tKSio6Jgutcs8P2NqkghLcz1vBv4G8H/jyKhBQsu38M7N8HdSfUN0127jkVBb2pA9+pQHKF+JTaSTDP8LyqqjOWY97w0yJyP3BxwSQ6tU+MFbBNRC6YL6BoH+dvoqo1C0rUkYS15xNnLEfb13oiiVWFp4yo6t4WSy82Img7UY57xFR866LDPSGqus0Zy7Gg5MqpNlXm2IrfU2VOr0tV9b09WAX36bfZvr4HZiKUEWSuvIRIK9hHKLCzAulUNHbHDWjyvaFmLBlhL4K0gzxXRJGD10R7qaAKTlSg7Ryiqluj5HUJsElEdlRAMy3RornHM9auYJ89lB8fMOZMcqZz2mGKcCuBLD76p8jOkWrR4rN3n9SdQLvVwA+iGxANa/f5wGVmXHDPiyFZ1e8FntPDYMySRfx9bUlhj8swW/8ZWaDUcMYyDvw8d6l0PqyI9gxVaw6rW7QHd8Idrr3EHJk7Sy9WtM0D1q1rzWTebUbHZnQRtVaxyqwFsds9zdKwMVaPiedq0eAPElaZ2pREh7xpB0YByf0t1n53sdrgjNUnC1jbTFnVqXuHaNoNbq3YwuYYgE1guggZzB2OkZRYaeRN7DeKHY4eJFbYBMf5fhJgHfB/KzpddzhGSmKFjXM4Q/kFcANwLZnH8guNuVKXYA6G2wNHqmSsvYAnjJmuA24Qke3R5n+lj6UD98Bpm7HCucNlwMdFZH3ETEEVnPPzCceASau0S+bSXNi//jBW7l4PkStKKiINc50ZQCu1gz3zcmcCnA1cb1pW2qFNYQY4Efh8P7c19VxCBA0ZGR2OAcaDIvJwD44Gz+z3VZd6rwevDsciYMIEQbcxLybc88LhKFbpanTuRF2ryjveGcsxjJg0h+y5DsvNmSq4yRnL4WA3E/vbVfWEyHG5E0mXAof4DWKHY3fGetOgX5h0xnIMI5o9OoVLv+e+MxYjc2Caj8xU9UXHqiJDQXeGC/w+lqPT1XeQLjo63Jl2ZNSiUQpPh98gHpwr+0mbYYl1hFbVsMf4KnB3LnZ7DfgMcHgf3HYCDTcDp5NFwo1jt99XQex2Z6wBuq6fGhPOjVjs9kmyMGT5xWZrn5swC9zcivZ7un/pqEisg4GVCyQACA6Y++8hsdtrFeyvVloc9Kpjtztj9XlShaCVlwGvYYAioVYsuZoFAXO0wkA4EiSoMbobL0Zsv+Ge+Q5nLIfDGcvhcDhjORy48cIxpJAQ9ttDNzhjOSjVKqjubeGM5Sh3G7FUVWdziefmPG6KM5ajt8Rz3yfzwEjIMrmMARcCX+pz4rkypGTijOUYVIlVlARwvwqurcgwBOx0OCghf3LIPTZXQRbMR4GN9j7tkCGbZFknD3HGYmQuIzYLJomOyHFNUkGE2UCzc4F/NtWz2QFTjdkC8ArgP/qZLtcZq9q9Sd3HoBTMdpmsb9b8GTe4KjgakkqAx22zL9HmW4BNfkGwc0kZvPo7uJsyAZxq/z7GozQxEjd868APROQNC92vKvm9zRFNu6TBi38hukUe//sA15g6WLZlMM3vOZ2xqsO4ZW+pm56fP2QtG6uGIegK1RpaNgH79mHuh7qWO2MtzirbUFVEpNHnW8Wpql4MHGAM9qemCukeHvCl1oUlcSEVfxp4DzBJdpFWnbFG2VIicpWpQnvbwE84VfqCGeBqEZnt9fQ5qfiEPyn52cUySUvFt6vHTPVcHamDUnE/yx6XZIDGQiIpuLeq1ozenb1AVZcBz14EdaIBrJvPrKqqv0J26DeIqk5o0zYReSS+xl4Rg9WBwyrYa4V+PiYik2a1ezawtMRxCfU8IiLbOg3jYHSo98FItM79Ix2OQUqQHO7dDGJ4s8VsW6cm4gGOu1h6P/v43q5o2a/2eFQqh8PhcDgcDofD4XA4HIysVRA8fHDZrkcMb6x4p7XD4Rj8c6y63xsqheaNYV1JzYMhGZJ5sGi0rneQ0eME4HIyFw6PoEvX7i9jwPuBGyPaDrz6F03Oq4AXmKvZIM+DBpnj8TnAN6umdSd+U3sDRztvlIJ9h7jtxwLPH6L27r0YTtD1DleAlNG8kVqlxKrlLjoOhQEgklqPAM/rZyCWEiXWom1d6h3qq4GhnLG6984uNZJRLqNjP5N111S1CezIRb4dVDqHK/gbzUcw6cJXULpYhJp+0XHEMjpSQQxBY65hMRIpsN6cZGc9YKejbYOCqu4HvLQPKk8CbLW/IGUbwDMXY8/SpaQR4ARVnTBDRrML/ljTZl/DNf1vishTNx6DuCwoUDN1w4OSlIdw27TW4sA1beMqQmIT5QTgX/Hcaq1wZYXv2kAWZyS6SpwNZNpiE4iqbnZ+KA1bLKBMGUaMfhuVpIy9xyLvt/pdPtB++y5RF+z7qnom8LsF1p6gqz5jCInKgMa/OF9VzyoIMR1o/w0RuaLNsxc3KpVsgOiy/NM0vnpU8CXAmRU01AcZTmThyD9XOK0ZifxY202taLQwavg+i1LPs3Ses5cpJ9HoMFYS/b9bC/sfOHK+MXGVbkR0fofD4YzlcDhjORzOWA6HwxnL4XDGcjicsRwOhzOWw8GAHhAzBA6RjIj/mcMZyyekwzGojBUShr0N+E+yS2fpEKrNs8CRwFcYvKsRWpFGIEMaEqFS+lctsW4VkTsZ7pu7WwZUNXUH6cVbDGp5m0XVjLUsuqk8jBIrBZYN4Go8V2H0rPqQSa1mBXMt0H5usRgrFZFUVYcuC15os6qmAxJEJlyAvAV4TkWBWQCuIwvYmQ5BwM468G7gBpMq/Q6E0wjz2q+HDH+Upmng4QoXmB1DRqL7ReRhRtwq6OhPlKYT+rwaS2SAWjNk+6qTLXDPWJ9plAA7RORbzlgM/eF+kyykwnXuXNDSoHB+he9cr6oHikjqjDX8CBGaqopMK25qLxwDIYtV4qrgiEmv1A/gF20hkHzocPcVdDjcCdfhcMZyOJyxHA6HM5bD4YzlcDhjORwOZyyHwxnL4XDGcjgczlgOB3tuMJl5oReScBLJLR2UOSn7T1Pk6c6Wqgi3UOuirlRk6G43O5yxWkMuIuWicia1MVrDh9ixxzKWKjURmlt/suT0FauTt2yd1KbIwsFRVGmuXCm1rVual646fucPvvxlam+8E5WLSLfdNnb00r3GL5ma1lTaUHlVaa5cLbWtmxpfXXX8zJWhTT5FHEPLWD/+sV3aS+T5rJRTl89A0kbL0iawSki2cTXwg/32Q3i+/dhMDkhWyakrEpA2dpJpA1gpsEkeAa7c1SaHY+iv5gvTbNXG9h3aQBZumyrNlXVqiszufrtN5tKt2pjarqlIG0YapbFiK3VBtvu0cIwWY6nlQc72R/U2r7AVh+MSRLK6mrQTc++pd7ql1IGb2x0OZyyHw1VBB0MTLKUZBZRxsCgBfTQ2djljDT/GbA/psdtZ9FBrq52xRkNSAdwFXGKrpUdpWryxqAGTYVycsRja0NKpfd4LXOAU8T2WY7BDV9cyfpVGH98R5l1TRLTCvtXj5BzOWI6iSZJY9pO1wLVRbPVeEgM2gFNF5DFVfSFZeOayAoGmth+8TUQutj68WlX/NsoM0s8UO/eIyBn23uNV9QpTn2slvuNx4DWDGWJagqbTlo+hzDfkUmJdA4ylZGl1ysKEff4K8MY+tPdA4GL795qS274QnQJW9em9zxpciZWiKGmqbZiOhZS09VlcmqJAmqYLs4xASjqU5uo4dnsZEivQYM5WdC1JYgXpMBV9FxLmVSGxtudyZ6V9kFhTA8VYxx+fXe9Y0Zi4jNkdX2oKykwbgzmB0kBWNGfWA5x88q6JwIrVO3+4c2bisBSU2TbrmkXSmYktML2rTQzPQX8ZjJUUpF/VEq2NtYJ3JNFfP+lT9N4yE0kki5kqdb67U8ivTW4BtpSRWUIOZSfMPNB5FTNPa5PDMfw3iBUBhI90UOgjmQOtFHgdqJJ0XBeoM5VjtG4QZxO6s0l90bz1pWXV5XC4E67D4YzlcDhjORwOZyyHwxnL4XDGcjgczlgOhzOWw+GM5XA4nLEcDmcsh8MZy+FwOGM5HM5YDoczlsOB38eqFqKqEn1WFYNPO4yAJPO13aeNY9AYKxURVdW0ynhynYQUy24QS8FtZN3Vdp82pced72cU3xBoJx1lxpqwyVuveIImIrsnp8tJqEREmvb/4wUDkahqIwoP5ugd4/Q/7nyoe8UoMlZYja4mCxZTqyAzhthKOA68H/i6qtYC88SRX+27pqqeSBbzbr+C9oX6ljs/9LwdCNGabgZOKTkSVKsIVNtCkNMqsrJULbEOWYSB/AXwfZNKaU5K1USkYRLqQuA8jw7cdzTCQgY8Zn9Vqvqjuceq8F1NspDGF4rIllhaRf9uqOrLgH8Ejot0fnFrat+0ln1V9eV9iOu3kMSaAX4CzI4iYyUVMnAdWAd8wVaqNCel9gI+DHzAnm16nqlKxv544LuL8P5NwBHAxirmYX2ErU0J8DERmY4yaAQp9XLgk8CvRYzoDFXd2GjFWlII/6yexqc3QtZMWl1j0kpyUuo8UxMbBWGPHf1XCWURpGXi+bHKyXT4MWAnmRm9oaovtb3U8dEezA0VDndp6kDsrwO+YAe946r6l6bXHx9l1HDVz+ESq8O91d+IyPbcXkojo4bD4RKrw73VT4GrVPWjwHeMqRpuJne4xOoNPwVuBF7pUsoxCIylUXbAdECsOd1I37fz9AyCMkQm5zg746A4yM7nbuT71DYYa8wm5/gIqYUMmcl5PPe5mBhzximHsR4H7idz/ajlJkEKrASe6XvHUrAemCxwRm6Sec//YgCOK54AbmnhjJwCewEn+L61BWOJSNjY/yNweYGvXM02/68GrotM2g66TnB9HvDlyJUqntQ1zJ8tGpvK/TlF5IfAyfM4tK6xBWCiz97pwy2xbBAbRXeV7ILftJOrNEyLyM5A20FsYLj02UKNVVMVHe1YBVtcSa+patP17VJRCw7BRtuewwlUFdJAVbGF1vM0t8tYLQipTsjyBUKg6aBKLIcfEDscQ39ArFTv9u9XJvpfr+Y+R2k+tGpjmW3fra56F+cviVuAetIQyj5olxLqlOjsarH70y+aJwU0q5ccsGasG8aKQ1W5CknX5va8ib2MOrf2aPIOZRt0Fj5hLrpiLwPuLNCIJMqc0awso1w4gprMr1TzBq+0jfYy4FDnjVK87x8Ska1lmNvtdnSZkaO2WSSjhd5bB44cAu0lMP0ssE5EUmv7sj4Zpbb6NHc46G/knHbDLvveqkRze4mHubIY4birDCdWUt/SftBs0M4fHQ6Hw+FwOBwOh8PhcDgcDgeLbW4PJsgWXu7zHmbG5st2n2vXVLlQu4p+W8icutC7yigz3/Od9KWXd9GFub5f47cYY7DQvCnjPW5idziqlljh4l3kT5VGTozBFSfNu7uE2OjGuc2QHTEkaiuQJLU4bWo7v4WkBnF95paS5g/+8nXlE8116CpU2M6Fysz3TqNXEvzLwvX7iG6F5aP2dN2nFm5JSnZgnebGU+YLDdAOfaJntGDeFP4WvV/nmWvayu2qzWfmpfU8ZWpWb3OhfiTRD+8Dfg78GBgTEbW/JvAN++1/x5Wpat0qGwd+qqobyOIgXGmDIqq6K5G3qi63+u8BHlbVzao6aX/rge+KSNN8ExMr8wzgNnv/e6y+ZVb/W4H7rJ7nRp09zd5xt6o+br+Hv432+a084VT1ZvvtCSt/D/BL++5RVT001//9VXWd/f54KBO986bYQ8ES3P279eVTIemd0efUqPxJufdM2Di8Hvi5qm7I9Wmzqh7eiTeE5QhrAH8HPGR1bgQeAP7U2iax+qOq35mHPptV9bDQhigH2YtsjDZGzz0J3AscZ757tUjFusbqXRc9P2lz68fAEiuTRPQ5w57bADxk5e9X1Sft+78NdLR3vMieuatgfkza532quiL0xxaPBPiZqj5hzz0B3AUcGfpB5N0eOnQAsNZW0i+p6oeA7cDHgZeRBQ1ZF68MRvyXAH8OHAP8FfAS4CxVnQPOsVDPsdQ7HFhqRLok8vZ+MfAWVf0CWbK4e3jKFf+5tlocYB3crqofBt4BLAE+BDwRpcLc2/oCcC3wLSvfzEUhepqerKqXAftaG99nP/2LLSwpWY6lWJpPAZfawvIy4M08FZjnLmBD7p6TkOVoWgucbo7NZ4vIrAVnWVuUL1dEZlT1HWRBaA4DziVzKpWo7g3t3KmK9neJqv418MZonBV4L/BBVT0G+CPrY8D/MvocDHzQvrse+LrRd0McyUlVzwZ+z8pcSJakIvTvUuDvVfWTNkZ1Mq/zg40Oj9i41ozea8lS3n5eVf9JRG5Q1TEb09uAC+zfZwPPAzbbO+eAO3PjtjSi9ZfJIiYnOc/+HcBMmLuqehxZLrXnAZ8BbrWx/BPgc6r6ceCLuxYUUwdQ1YtVtamq05rhclX9hP171n67PkgqWzFepqpfsGe+oqpLVPVkVf2uffchVV0brdgrjdubNonjAf8NfQonRd8/S1W3Wpn3q+pyVX27qu5Q1YdV9ZycaoOqvsmeb6rqm7tQkY6Oyr+jzTKvj8q8qGjDq6oTqvr/7ZmA81X1AFV9XVT+v0Ur/3Lrzx2q+oiqfqwMv0KTlLPWhs9Fv5+pql+0cV1atGFX1UNsnjRV9d0tVExU9Sar/+7c72MmIVVV/z6S5qjqN63em3NlDlbVOSvz4VBPwbs/b+Vvb6WaquorIlq/oR31XlV/z96dquqxUT8uU9VrVfX34+frBZcYw8rxB/b9bJRDSqIs9A1VPQ84DfiFiJxu3Hqzqn7AVoFLgI0icjm75ypaZsQcA1abxAv3vebY/SJZQhbb8BTgCpM4F4vI5Zb3aqagLwBHqOpzrF9hz7DV2pVP9D1uq9a+UfmVNlFqwGzBvnDC2rx3VGYfK5OIyGyLy6INo+1fAdusTUm89zX1Yo2pRwCXisj51s41ZNdFwpjcLyJzHfLZ98kysKwxGiXAt8lCdKe2Yku0rx0zqbYmGsdAnzowk6PP5pCyVlVXWz8B9o80iCmKc1lNWD/rNu4vsjbNmYTNLxZj9vsSKz+uqitN8mjBXirQ+ijrey26JzdNFvsxLrPBpOhBwLGqusNocX5EqyS8pz5PFNQQcnp8nstvW0JsdBuAZtTo0NBWYdNmbNLNqupngNMjJqq1uKF5gbVrB/DrInKP7T92hghC7H4B7S/sL8Y/icgfx3mJDU0zwMTfpbaItPJIbxSUaVqZ2gJhEcIi9slI5UkKLjJuM/XlUOvvjKr+g9Fsp5U5EngwUocXMiOnwG+aGvfbtueJsR3YJxikrFzTmL2IPkVm51pkEGtEhppGbsGkBV3D/PhLU38DJgrU+Ia1LQ4z0Ij3ihRfEr3Y/mL8h4icYjaEhmlcNwG/ZSr+5wrqulBEPhrK1AviHjRM7/4zYB/7vMJWGS2YHAmwCviOETys+GkLwoXJdpptdjcBJ9nq+V7gQOD2Fmc9tWhSfFpVPyEi/6aq4wWSITD4p22ftFeUwfG+kJe4DMtqwZUaia2lLRKc/wj4KPDPtpC1Sipei/ZcDxlTTdh+40e2D+omYXUwEv2BXWBdEgULPc3q/RdV/YCI3NHlFZE4DkQS1ZHME6sj/Hasqn4beJIsY8xdZHH597V/h7m6y8pnPBXTMH6nzjM/vmrM2rA5/ZiVa+asznebTWF1ZJ9ITTN7q6ruD5xTJLHUCPuv9pLlNnG3APsVTMRAmIZtEEPQz0OAo1t0JpSZNMvMH9r3y4DDROSLBQEjg9HhZuCXwP8wZgyS8npaB0j5nojc2EOAlYXu34TBnY3KzNpgpC0YS4FHReTfTW0+1zbtcwVHIFuAi4D/CbxKVc8CrhaRh82Kt9bqW9Jh/xLbH9WBW0Xka9F7lwPvBl5jhpg7coaSdgPYjEeTbzoy6U/bd1IQZyPUO23vfae18T7gCBG5Kn/Ibp+xNNT8O+e5WXyTiNww3/GIScIjTOBsAK4SkenombeZ9nCWGTN2Y6xAvINE5N+s0N4LBA0RYLuI/FH0opcAr6N1fAABbhaRd6nqkWZJfAHwWVW9zUy+swVEuBb4ilnGngu83PYzG4CfRVaneOX6VVVdZ4McZ8/YIiK393IJ1FS9g6zeZ0VlDlLVZ5ma9MsWwV/GTRX9B6vnD41Jnrbiisgk8BFV3WkS/TJgvapuNZp1FKUpmpA14G3AccCPVPVMo9FOUyuxWP6bu8glHNrykGWpX2p73RCb4xkmITYBj7WY8Peaur4P8Ds25p9V1YfNojyVCxuxvy1Mq6z8EuBwY+IpEdnYYnxfrKqPGi+k0ft3Wkqo0Je1Zgldbgniv2F9mDOL+jbTIHaz4FxsVo/NZqVKIqvUvfbbdTkLzjX2/Xqz+NXMYnhKZPV6a/SulZE16LP2/BJVvc6+m1bVKVU9IWcVnLLfPxJZtO6w74Kl6OiozJsjC04ewSL3nwWWsmABenn0/Dn5A9ro+QNU9QFV3aKqO6My2+zv5tw51kTU7mBh3SuyZAa8Jn+OZZ9n5/oQ46gOz7HqZtW6zui0yayvk2Yt3KaqB9ockFw/jlPVGXvvefE8ihcdG6cz7bmt9rfFPtUsqXV7NtT9Lfvt+/b9XmZ5U1XdbnQ+O0e7M+23jaraiMZ+0r7/RO75V8xDx4AN8TmWnXMeZvVNW92BXqqqf21tre/aHxjXH2jqyAxwe6TiJMDzjVOfFJF1UZlDjVunrUwQ9SuBo4zG94XVwibKMbbfeVxEHrTv15qq2bBV8w4R2RZZoo621eEhy4oiJrGWRVGj7gji2Va557TYt4TVepuI3NUicM5yqz8BHhCRJ4r2fNa2Y63NcRSgYF3dIiJ3RvWKnYOsADYEWgZLorU5Be4RkS25chiNDmnRrzuCEacTyWW03z931pYCcyLy0xZllxp96rbvezxPn6j+FfZsLOGCenannXNKZIQ4wvZRkyJyd1hcTTOYM0n0gIj8MlLT1piUbeTyiyWmaj4qIg9Gz4c2NefRwuaAnxV4hbzQ6pQczR4sogOLGHzf42iMKO3bqX+hZ4ZpfsRt/S8HArd6GLH2XwAAAABJRU5ErkJggg==" alt=""></span><span class="brand-name">MKTG Stories<small>行销日志</small></span></a>
+    <nav class="nav" aria-label="Services"><a href="https://aboutus.mktg-stories.com/digital-marketing/">Digital Marketing</a><a href="https://aboutus.mktg-stories.com/systematic/">Systematic</a><a href="https://aboutus.mktg-stories.com/creators-platform/" aria-current="page">Creators Platform</a><a href="https://aboutus.mktg-stories.com/#contact"><span class="z">联系我们</span><span class="e">Contact</span></a></nav>
+    <div class="lang" role="group" aria-label="Language"><button type="button" id="lang-zh" aria-pressed="true">中文</button><button type="button" id="lang-en" aria-pressed="false">EN</button></div>
+    <a class="btn btn-brand btn-sm" href="#demo"><span class="z">预约 Demo</span><span class="e">Book a demo</span></a>
+  </div></header>
+<main id="top">
+<section class="svc-hero butter-bg"><div class="page">
+  <div>
+    <p class="crumbs"><a href="https://aboutus.mktg-stories.com/">MKTG Stories</a> / <a href="https://aboutus.mktg-stories.com/#services"><span class="z">服务</span><span class="e">Services</span></a> / <span>Creators Platform</span></p>
+    <p class="eyebrow" style="margin-top:18px"><span class="z">服务</span><span class="e">Service</span> 03 · Creators Platform</p>
+    <h1><span class="z">每一档 KOC campaign，<br>都在同一个平台上。</span><span class="e">Every KOC campaign,<br>on one platform.</span></h1>
+    <p class="lead"><span class="z">Creators Platform 是我们自己做的 KOC 系统，现在开放给品牌使用：排档期、执行、结案都在上面，你随时登录看进度和成效。</span><span class="e">Creators Platform is the KOC system we built for ourselves, now open to brands. Scheduling, execution and close-out all live there, and you can log in to see progress and results any time.</span></p>
+    <div class="svc-chips"><span><span class="z">小红书 KOC</span><span class="e">Xiaohongshu KOC</span></span><span>Instagram KOL</span><span><span class="z">中文 / English</span><span class="e">Chinese / English</span></span><span><span class="z">专属登录页面</span><span class="e">Your own login</span></span></div>
+    <div class="acts"><a class="btn btn-brand" href="#demo"><span class="z">预约 Demo</span><span class="e">Book a demo</span></a>
+      <a class="btn btn-white" href="https://creator-platform.mktg-stories.com/login/" target="_blank" rel="noopener"><span class="z">已经是客户？登录 →</span><span class="e">Already a client? Log in →</span></a></div>
+  </div>
+  <div class="art butter">
+          <svg viewBox="0 0 480 360" role="img" aria-label="Two people planning festive KOC campaigns on a calendar board in the Creators Platform">
+            <circle cx="240" cy="184" r="156" fill="#FFE79A"/>
+            <!-- lanterns -->
+            <path d="M52 0v34M30 0v70" stroke="#3A2E27" stroke-width="2.5"/>
+            <ellipse cx="52" cy="52" rx="17" ry="21" fill="#F36130"/><path d="M52 31v42M40 36q-6 16 0 32M64 36q6 16 0 32" stroke="#C8421A" stroke-width="2.5" fill="none"/><rect x="46" y="70" width="12" height="5" fill="#FFC83D"/><path d="M52 75v16" stroke="#FFC83D" stroke-width="3"/>
+            <ellipse cx="30" cy="92" rx="13" ry="17" fill="#FF8A5B"/><path d="M30 75v34" stroke="#C8421A" stroke-width="2.5"/><path d="M30 109v14" stroke="#FFC83D" stroke-width="3"/>
+            <!-- board -->
+            <rect x="126" y="52" width="232" height="212" rx="18" fill="#fff" stroke="#3A2E27" stroke-width="5"/>
+            <path d="M126 70a18 18 0 0 1 18-18h196a18 18 0 0 1 18 18v22H126z" fill="#F36130"/>
+            <rect x="170" y="42" width="8" height="20" rx="4" fill="#3A2E27"/><rect x="306" y="42" width="8" height="20" rx="4" fill="#3A2E27"/>
+            <g stroke="#F1DDCD" stroke-width="2"><path d="M126 160h232M126 216h232M204 92v172M282 92v172"/></g>
+            <g transform="rotate(-6 158 128)"><rect x="140" y="108" width="40" height="40" rx="5" fill="#FFE79A"/><path d="M150 122h20M150 132h14" stroke="#3A2E27" stroke-width="3" stroke-linecap="round" opacity=".5"/></g>
+            <g transform="rotate(5 232 126)"><rect x="212" y="106" width="40" height="40" rx="5" fill="#FFB3C1"/><path d="M0 -3C-7 -13-21-3-12 6L0 16 12 6C21-3 7-13 0-3z" transform="translate(232 124) scale(.7)" fill="#F36130"/></g>
+            <g transform="rotate(-4 312 128)"><rect x="292" y="108" width="40" height="40" rx="5" fill="#CFF1E1"/><path d="M302 122h20M302 132h14" stroke="#3A2E27" stroke-width="3" stroke-linecap="round" opacity=".5"/></g>
+            <g transform="rotate(4 158 186)"><rect x="140" y="166" width="40" height="40" rx="5" fill="#CDE8FB"/><path d="M150 180h20M150 190h14" stroke="#3A2E27" stroke-width="3" stroke-linecap="round" opacity=".5"/></g>
+            <g transform="rotate(-5 232 186)"><rect x="212" y="166" width="40" height="40" rx="5" fill="#FFD3B5"/><path d="M232 176l3 8 8 1-6 5 2 8-7-4-7 4 2-8-6-5 8-1z" fill="#F36130"/></g>
+            <g transform="rotate(6 312 186)"><rect x="292" y="166" width="40" height="40" rx="5" fill="#FFE79A"/><path d="M302 180h20M302 190h14" stroke="#3A2E27" stroke-width="3" stroke-linecap="round" opacity=".5"/></g>
+            <g transform="rotate(-3 158 240)"><rect x="140" y="222" width="40" height="36" rx="5" fill="#CFF1E1"/></g>
+            <g transform="rotate(5 232 240)"><rect x="212" y="222" width="40" height="36" rx="5" fill="#FFE3E9"/></g>
+            <!-- left person -->
+            <rect x="62" y="214" width="14" height="46" rx="6" fill="#3A2E27"/><rect x="84" y="214" width="14" height="46" rx="6" fill="#3A2E27"/>
+            <rect x="56" y="164" width="48" height="68" rx="20" fill="#5BB287"/>
+            <path d="M96 186L132 150" stroke="#5BB287" stroke-width="14" stroke-linecap="round"/><circle cx="136" cy="146" r="8" fill="#F2C4A0"/>
+            <circle cx="80" cy="146" r="17" fill="#F2C4A0"/>
+            <path d="M62 146q-2-24 20-24t18 22q-8-12-22-12-8 6-16 14z" fill="#3A2A22"/>
+            <circle cx="74" cy="148" r="2.4" fill="#3A2A22"/><circle cx="88" cy="148" r="2.4" fill="#3A2A22"/><path d="M75 156q6 5 12 0" stroke="#C8421A" stroke-width="2.4" fill="none" stroke-linecap="round"/>
+            <!-- right person -->
+            <rect x="380" y="214" width="14" height="46" rx="6" fill="#3A2E27"/><rect x="402" y="214" width="14" height="46" rx="6" fill="#3A2E27"/>
+            <rect x="374" y="164" width="48" height="68" rx="20" fill="#8EC9F5"/>
+            <path d="M384 186L350 150" stroke="#8EC9F5" stroke-width="14" stroke-linecap="round"/><circle cx="346" cy="146" r="8" fill="#D99A73"/>
+            <circle cx="398" cy="146" r="17" fill="#D99A73"/>
+            <path d="M380 142q4-22 20-22t18 20q-10-10-18-8-12 2-20 10z" fill="#2B1E16"/>
+            <circle cx="392" cy="148" r="2.4" fill="#2B1E16"/><circle cx="406" cy="148" r="2.4" fill="#2B1E16"/><path d="M393 156q6 5 12 0" stroke="#C8421A" stroke-width="2.4" fill="none" stroke-linecap="round"/>
+            <!-- gifts -->
+            <rect x="168" y="292" width="58" height="42" rx="7" fill="#F36130"/><rect x="193" y="292" width="8" height="42" fill="#FFD966"/><path d="M197 292q-18-18-12-2 5 8 12 2zM197 292q18-18 12-2-5 8-12 2z" fill="#FFD966"/>
+            <rect x="238" y="306" width="46" height="28" rx="6" fill="#FFB3C1"/><rect x="258" y="306" width="7" height="28" fill="#fff"/>
+            <ellipse cx="240" cy="338" rx="150" ry="6" fill="#F2D27A" opacity=".6"/>
+            <!-- plane + sparkles -->
+            <path d="M396 64l56-22-20 50-14-16-14 12z" fill="#fff" stroke="#3A2E27" stroke-width="3" stroke-linejoin="round"/>
+            <path d="M420 120l3 8 8 3-8 3-3 8-3-8-8-3 8-3z" fill="#fff"/>
+            <path d="M448 188l2 6 6 2-6 2-2 6-2-6-6-2 6-2z" fill="#F36130"/>
+          </svg>
+        </div>
+</div></section>
+<section class="svc-sec" style="padding-top:0"><div class="page">
+  <p class="eyebrow"><span class="z">我们自己就在用</span><span class="e">We run on it ourselves</span></p>
+  <h2 class="h2"><span class="z">我们自己的每一档 campaign，都在这个平台上跑。</span><span class="e">Every campaign we run lives on this platform.</span></h2>
+  <div class="stats3"><div><b>13</b><small><span class="z">档 campaign 已执行</span><span class="e">campaigns delivered</span></small></div><div><b>348</b><small><span class="z">篇笔记</span><span class="e">posts</span></small></div><div><b>4.97M</b><small><span class="z">小红书累计曝光</span><span class="e">Xiaohongshu impressions</span></small></div></div>
+  <p class="stat-src"><span class="z">来源：MKTG Stories 自己执行的 campaign 数据，截至 2026.10.15。</span><span class="e">Source: campaigns run by MKTG Stories, as of 15 Oct 2026.</span></p>
+</div></section>
+<section class="svc-sec"><div class="page">
+  <p class="eyebrow"><span class="z">适合谁</span><span class="e">Who it's for</span></p>
+  <h2 class="h2"><span class="z">如果你正遇到这些情况</span><span class="e">If any of this sounds familiar</span></h2>
+  <div class="cards3"><article class="c3"><b><span class="z">每年都做节庆 campaign</span><span class="e">Festive campaigns every year</span></b><p><span class="z">母亲节、父亲节、中秋、圣诞、农历新年，想提前排好、一档一档累积成果。</span><span class="e">Mother's Day, Father's Day, Mid-Autumn, Christmas and Chinese New Year, planned early and built on one after another.</span></p></article><article class="c3"><b><span class="z">想看清楚 KOC 的投入与回报</span><span class="e">You want to see KOC spend and return clearly</span></b><p><span class="z">不只要截图，要能比较每一档的观看、互动和成本。</span><span class="e">Not just screenshots: views, engagement and cost you can compare across campaigns.</span></p></article><article class="c3"><b><span class="z">不想再追 Excel 和群组</span><span class="e">Done chasing spreadsheets and group chats</span></b><p><span class="z">人选、排期、审稿和报告都在一个地方，不用到处找。</span><span class="e">Creators, schedules, reviews and reports in one place.</span></p></article></div>
+</div></section>
+<section class="svc-sec"><div class="page">
+  <p class="eyebrow"><span class="z">服务内容</span><span class="e">What's included</span></p>
+  <h2 class="h2"><span class="z">一档 campaign，在平台上怎么走</span><span class="e">How a campaign runs on the platform</span></h2>
+  <div class="blocks"><article class="blk"><h3><span class="z">档期与创意</span><span class="e">Calendar and concept</span></h3><ul><li><span><span class="z">母亲节、父亲节、中秋、圣诞、农历新年，提前排在同一个日历</span><span class="e">Mother's Day, Father's Day, Mid-Autumn, Christmas and Chinese New Year on one calendar, early</span></span></li><li><span><span class="z">每一档一份 Proposal：Brief、产品、内容方向、人数与预算</span><span class="e">A proposal per campaign: brief, products, content direction, headcount and budget</span></span></li><li><span><span class="z">建议博主：按过往合作数据，从自有博主 pool 挑出表现好的人</span><span class="e">Suggested creators, chosen from our own pool by how they actually performed</span></span></li><li><span><span class="z">叙事方式：开箱、讲故事、探店的配比，加上悬念开头</span><span class="e">Storytelling mix: unboxing, stories and store visits, with a hook up front</span></span></li><li><span><span class="z">这档活动的建议：Tier 配比、发布节奏、预算是否足够</span><span class="e">Advice for the campaign: tier mix, posting rhythm and whether the budget fits</span></span></li><li><span><span class="z">Proposal 可下载 PDF，你批准后才开始执行</span><span class="e">Download the proposal as a PDF; execution starts once you approve</span></span></li></ul></article><article class="blk"><h3><span class="z">执行</span><span class="e">Execution</span></h3><ul><li><span><span class="z">按预算安排 Tier 1 / Tier 2 KOC 与 KOL 的组合</span><span class="e">A mix of Tier 1 and Tier 2 KOCs and KOLs that fits the budget</span></span></li><li><span><span class="z">人选由你逐位确认，看得到每位博主跟你合作过的表现</span><span class="e">You approve each creator, with their past results for your brand in view</span></span></li><li><span><span class="z">探店门市、探店时间、发布时间表</span><span class="e">Store visits, visit times and the publishing schedule</span></span></li><li><span><span class="z">两轮审稿和跟进由我们的团队负责，进度在平台上更新</span><span class="e">Two rounds of review and all follow-ups handled by our team, with progress on the platform</span></span></li></ul></article><article class="blk"><h3><span class="z">结案</span><span class="e">Close-out</span></h3><ul><li><span><span class="z">每档结案报告：曝光、观看、互动、互动率</span><span class="e">A report per campaign: impressions, views, engagement and engagement rate</span></span></li><li><span><span class="z">投入与回报：KOC 投入、每次观看的成本</span><span class="e">Spend and return: KOC spend and cost per view</span></span></li><li><span><span class="z">和你自己过往每一档比较</span><span class="e">Compared with every past campaign of your own</span></span></li><li><span><span class="z">下一档怎么调整：哪些博主、哪种内容表现最好</span><span class="e">What to change next: which creators and which content worked best</span></span></li><li><span><span class="z">中英文报告，可下载 PDF</span><span class="e">Reports in Chinese and English, downloadable as PDF</span></span></li></ul></article></div>
+</div></section>
+<section class="svc-sec"><div class="page"><div class="band mint">
+  <div><p class="eyebrow"><span class="z">自有博主 pool</span><span class="e">Our own creator pool</span></p><h3><span class="z">推荐的博主，来自我们自己累积的 pool。</span><span class="e">Suggested creators come from a pool we built ourselves.</span></h3>
+    <p><span class="z">不是临时找人。pool 里的博主都跟我们合作过，有真实的合作数据；推荐时看的是过往表现，不只是粉丝数。</span><span class="e">Not last-minute sourcing. Creators in the pool have worked with us and come with real results, so suggestions are based on past performance, not follower counts alone.</span></p></div>
+  <ul><li><span class="z">每位博主都有过往合作的观看、互动与表现分数</span><span class="e">Every creator has past views, engagement and a performance score</span></li>
+    <li><span class="z">按你的档期、产品和预算挑 Tier 1 / Tier 2</span><span class="e">Tier 1 and Tier 2 picked for your calendar, products and budget</span></li>
+    <li><span class="z">新的博主也持续加入 pool</span><span class="e">New creators keep joining the pool</span></li></ul>
+</div></div></section>
+<section class="svc-sec" style="padding-top:0"><div class="page"><div class="band sky">
+  <div><p class="eyebrow"><span class="z">你的专属页面</span><span class="e">Your own page</span></p><h3><span class="z">你的品牌，有自己的登录页面。</span><span class="e">Your brand gets its own login page.</span></h3>
+    <p><span class="z">活动进度、博主名单、结案报告都在同一页，中文和英文随时切换。</span><span class="e">Progress, creators and close-out reports on one page, in Chinese or English.</span></p></div>
+  <ul><li><span class="z">只看得到自己的活动和数据</span><span class="e">Only your own campaigns and data</span></li>
+    <li><span class="z">和你过往每一档比较</span><span class="e">Compared with every past campaign of yours</span></li>
+    <li><span class="z">页面附版权标示，避免资料外流</span><span class="e">Pages carry a copyright mark to keep data in</span></li></ul>
+</div></div></section>
+<section class="svc-sec"><div class="page">
+  <p class="eyebrow"><span class="z">怎么合作</span><span class="e">How we work</span></p>
+  <h2 class="h2"><span class="z">四个步骤</span><span class="e">Four steps</span></h2>
+  <ol class="steps"><li><b><span class="z">预约 Demo</span><span class="e">Book a demo</span></b><p><span class="z">了解你的品牌、产品和一年的档期。</span><span class="e">We learn about your brand, products and the year's calendar.</span></p></li><li><b><span class="z">开通你的专属页面</span><span class="e">Open your own page</span></b><p><span class="z">你和团队用自己的密码登录，只看得到自己的资料。</span><span class="e">You and your team log in with your own password and see only your data.</span></p></li><li><b><span class="z">每一档：Proposal → 执行 → 结案</span><span class="e">Each campaign: proposal, execution, close-out</span></b><p><span class="z">每个阶段都在平台上，进度和数据随时看。</span><span class="e">Every stage is on the platform, with progress and numbers always visible.</span></p></li><li><b><span class="z">一年的成果都在一起</span><span class="e">A year of results in one place</span></b><p><span class="z">所有档期的数据累积在同一页，下一年更好排。</span><span class="e">Every campaign's data builds up on one page, so next year is easier to plan.</span></p></li></ol>
+  <p class="eyebrow" style="margin-top:34px"><span class="z">你会拿到</span><span class="e">What you get</span></p>
+  <div class="get"><span><span class="z">每档 Proposal（可下载 PDF）</span><span class="e">A proposal per campaign (PDF)</span></span><span><span class="z">经你确认的博主名单</span><span class="e">A creator list you approve</span></span><span><span class="z">每档结案报告与投入回报</span><span class="e">A close-out report with spend and return</span></span><span><span class="z">品牌专属的登录页面</span><span class="e">Your brand's own login page</span></span></div>
+</div></section>
+<section class="svc-sec"><div class="page">
+  <p class="eyebrow"><span class="z">常见问题</span><span class="e">FAQ</span></p>
+  <h2 class="h2"><span class="z">你可能想问</span><span class="e">You might be wondering</span></h2>
+  <div class="faq"><details><summary><span class="z">其他品牌看得到我的资料吗？</span><span class="e">Can other brands see my data?</span></summary><p><span class="z">不会。每个品牌只看得到自己的页面、活动和数据，页面也有版权标示。</span><span class="e">No. Each brand only sees its own page, campaigns and data, and pages carry a copyright mark.</span></p></details><details><summary><span class="z">一定要整年合作吗？</span><span class="e">Do I have to commit for a whole year?</span></summary><p><span class="z">可以先从一档开始，细节在 Demo 里按你的档期谈。</span><span class="e">You can start with one campaign; we work out the details around your calendar in the demo.</span></p></details><details><summary><span class="z">只有小红书吗？</span><span class="e">Is it only Xiaohongshu?</span></summary><p><span class="z">目前以小红书 KOC 为主，也包含 Instagram KOL。</span><span class="e">Mainly Xiaohongshu KOCs for now, with Instagram KOLs as well.</span></p></details><details><summary><span class="z">我的团队可以一起登录吗？</span><span class="e">Can my team log in too?</span></summary><p><span class="z">可以，开通时会给你的团队登录方式。</span><span class="e">Yes. Your team gets access when the page is set up.</span></p></details></div>
+</div></section>
+<section class="svc-sec" id="demo"><div class="page"><div class="svc-cta">
+  <p class="eyebrow"><span class="z">预约 Demo</span><span class="e">Book a demo</span></p>
+  <h2><span class="z">想聊聊 Creators Platform？</span><span class="e">Let's talk about Creators Platform.</span></h2>
+  <p style="margin:0;color:var(--ink-2)"><span class="z">发邮件给我们，说说你的品牌和想做的事，我们会约时间给你看。</span><span class="e">Email us about your brand and what you have in mind, and we will set up a time to show you.</span></p>
+  <div class="mail"><code id="mail-addr">contact@mktg-stories.com</code><button type="button" class="btn btn-white btn-sm" id="copy-btn"><span class="z">复制邮箱</span><span class="e">Copy email</span></button></div>
+  <a class="btn btn-brand" id="mail-link" data-zh="预约 Demo｜Creators Platform" data-en="Book a demo | Creators Platform" href="mailto:contact@mktg-stories.com"><span class="z">发邮件预约 Demo</span><span class="e">Email us to book</span></a>
+  <p style="margin:0;font-size:12.5px;color:var(--muted)"><span class="z">按钮会打开你的邮件程序；如果没有反应，请复制邮箱地址直接发送。</span><span class="e">The button opens your email app. If nothing happens, copy the address and write to us directly.</span></p>
+</div>
+  <p class="eyebrow" style="margin-top:40px"><span class="z">其他服务</span><span class="e">Other services</span></p>
+  <div class="others"><a href="https://aboutus.mktg-stories.com/digital-marketing/"><b>Digital Marketing</b><span><span class="z">数码营销 · 内容规划 · 广告投递 · KOC</span><span class="e">Content · Ads · KOC</span></span></a><a href="https://aboutus.mktg-stories.com/systematic/"><b>Systematic</b><span><span class="z">系统化运营 · 建立系统 · Vibe Coding</span><span class="e">Systematic operations · Systems · Vibe coding</span></span></a></div>
+</div></section>
+</main>
+<footer class="site" id="contact"><div class="page">
+    <div class="fine-print"><span>© 2026 MKTG Stories Solutions · contact@mktg-stories.com</span><span><a href="https://aboutus.mktg-stories.com/" style="color:inherit">aboutus.mktg-stories.com</a></span></div>
+  </div></footer>
+<script>
+(function(){
+  var root=document.documentElement, EMAIL='contact@mktg-stories.com';
+  var bz=document.getElementById('lang-zh'), be=document.getElementById('lang-en'), link=document.getElementById('mail-link');
+  function setLang(l){
+    root.setAttribute('data-lang',l); root.setAttribute('lang',l==='en'?'en':'zh-Hans');
+    bz.setAttribute('aria-pressed',String(l!=='en')); be.setAttribute('aria-pressed',String(l==='en'));
+    try{localStorage.setItem('mktg-profile-lang',l)}catch(e){}
+    var en=l==='en', subject=en?link.dataset.en:link.dataset.zh;
+    var body=en?'Hi MKTG Stories,\n\nI would like to book a demo.\n\nBrand / company:\nName:\nPreferred time:\n':'你好 MKTG Stories，\n\n我想预约一次 Demo。\n\n品牌 / 公司：\n姓名：\n方便的时间：\n';
+    link.setAttribute('href','mailto:'+EMAIL+'?subject='+encodeURIComponent(subject)+'&body='+encodeURIComponent(body));
+  }
+  bz.addEventListener('click',function(){setLang('zh')}); be.addEventListener('click',function(){setLang('en')});
+  var cb=document.getElementById('copy-btn'), addr=document.getElementById('mail-addr');
+  cb.addEventListener('click',function(){
+    var done=function(){var old=cb.innerHTML; cb.textContent=root.getAttribute('data-lang')==='en'?'Copied':'已复制'; setTimeout(function(){cb.innerHTML=old},1800)};
+    var sel=function(){var r=document.createRange();r.selectNodeContents(addr);var s=window.getSelection();s.removeAllRanges();s.addRange(r)};
+    try{navigator.clipboard.writeText(EMAIL).then(done,sel)}catch(e){sel()}
+  });
+  var saved=null; try{saved=localStorage.getItem('mktg-profile-lang')}catch(e){}
+  setLang(saved==='en'?'en':'zh');
+})();
+</script>
+</body>
+</html>
