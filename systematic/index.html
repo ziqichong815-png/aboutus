@@ -330,6 +330,50 @@ footer.site{padding-block:clamp(56px,7vw,88px) 40px}
 @media (max-width:900px){.svc-hero .page,.band{grid-template-columns:minmax(0,1fr)}.steps{grid-template-columns:repeat(2,minmax(0,1fr))}.cards3{grid-template-columns:minmax(0,1fr)}}
 @media (max-width:560px){.steps,.others,.stats3{grid-template-columns:minmax(0,1fr)}}
 
+/* steps as a vertical journey with a moving scene each */
+.jr{list-style:none;margin:30px 0 0;padding:0;display:grid;gap:18px;position:relative}
+.jr::before{content:"";position:absolute;left:27px;top:28px;bottom:28px;width:3px;border-radius:3px;background:linear-gradient(var(--brand),var(--sun),var(--ink))}
+.jr li{display:grid;grid-template-columns:56px minmax(0,1fr);gap:18px;align-items:start;position:relative}
+.jr-n{position:relative;z-index:1;width:56px;height:56px;border-radius:50%;background:var(--brand);color:#fff;display:grid;place-items:center;font-weight:800;font-size:17px;box-shadow:0 0 0 6px var(--bg),var(--sh-1)}
+.jr li:nth-child(2) .jr-n{background:#F7884F}.jr li:nth-child(3) .jr-n{background:#E9A43A}.jr li:nth-child(4) .jr-n{background:var(--ink)}
+.jr-c{background:#fff;border-radius:var(--r-xl);box-shadow:var(--sh-1);display:grid;grid-template-columns:minmax(0,1.3fr) minmax(0,1fr);overflow:hidden}
+.jr-t{padding:clamp(20px,2.6vw,30px);display:grid;gap:8px;align-content:center}
+.jr-t small{font-weight:800;font-size:12px;letter-spacing:.08em;color:var(--brand-ink)}
+.jr-t b{font-size:clamp(19px,2vw,24px);line-height:1.35;letter-spacing:-.01em}
+.jr-t p{margin:0;color:var(--ink-2);font-size:15px;line-height:1.65}
+.jr-v{min-height:190px;display:grid;place-items:center;background:var(--butter)}
+.jr-v.v1{background:var(--mint)}.jr-v.v2{background:var(--peach)}.jr-v.v3{background:var(--sky)}
+.sc{display:grid;place-items:center;width:100%;height:100%;padding:16px}
+.sc-chat{display:grid;gap:8px;align-content:center;max-width:240px}
+.sc-chat p{margin:0;padding:8px 12px;border-radius:14px;font-size:12.5px;font-weight:700;width:max-content;max-width:100%;animation:msg 6s ease infinite}
+.sc-chat .me{justify-self:end;background:var(--brand);color:#fff;border-bottom-right-radius:4px}
+.sc-chat .you{background:#fff;border-bottom-left-radius:4px;animation-delay:1.2s}
+.sc-chat .dots{display:flex;gap:4px;background:#fff;animation-delay:2.4s}.sc-chat .dots i{width:6px;height:6px;border-radius:50%;background:var(--muted);animation:type 1.2s ease-in-out infinite}
+.sc-chat .dots i:nth-child(2){animation-delay:.2s}.sc-chat .dots i:nth-child(3){animation-delay:.4s}
+@keyframes msg{0%,8%{opacity:0;transform:translateY(8px)}16%,90%{opacity:1;transform:none}100%{opacity:0}}
+.sc-pipe{display:flex;gap:8px;align-items:center;justify-content:center}
+.sc-pipe span{background:#fff;border-radius:999px;padding:9px 16px;font-weight:800;font-size:14px;box-shadow:0 6px 14px -10px rgba(120,70,30,.5);animation:lit 4.5s ease infinite;animation-delay:calc(var(--i) * 1.2s)}
+@keyframes lit{0%,5%{background:#fff;color:var(--ink)}12%,30%{background:var(--brand);color:#fff;transform:translateY(-4px)}40%,100%{background:#fff;color:var(--ink);transform:none}}
+.sc-map{width:min(240px,100%);height:auto}
+.sc-map rect{fill:#fff;stroke:var(--ink);stroke-width:2.5}.sc-map rect.hot{fill:var(--peach)}
+.sc-map .mp{fill:none;stroke:var(--brand);stroke-width:3;stroke-dasharray:300;animation:mapd 4.5s ease-in-out infinite}.sc-map .m2{animation-delay:.6s}
+.sc-map .warn{fill:var(--brand);animation:pulse 1.6s ease-in-out infinite;transform-origin:190px 22px}
+@keyframes mapd{0%{stroke-dashoffset:300}45%,85%{stroke-dashoffset:0}100%{stroke-dashoffset:-300}}
+.sc-build{position:relative;width:170px;height:140px}
+.bk{position:absolute;height:30px;border-radius:9px;box-shadow:0 6px 14px -8px rgba(120,70,30,.5);animation:drop 5s cubic-bezier(.3,1.4,.5,1) infinite}
+.b1{left:10px;bottom:0;width:150px;background:var(--brand);animation-delay:0s}.b2{left:20px;bottom:34px;width:90px;background:#fff;animation-delay:.5s}
+.b3{left:114px;bottom:34px;width:46px;background:var(--sun);animation-delay:1s}.b4{left:44px;bottom:68px;width:90px;background:var(--soft-orange);animation-delay:1.5s}
+@keyframes drop{0%,5%{opacity:0;transform:translateY(-40px)}15%,85%{opacity:1;transform:none}100%{opacity:0}}
+.sc-loop{position:relative;width:140px;height:140px}
+.sc-loop svg{width:100%;height:100%;animation:spin 5s linear infinite}
+.sc-loop .lp{fill:none;stroke:var(--brand);stroke-width:7;stroke-linecap:round}.sc-loop .lph{fill:none;stroke:var(--brand);stroke-width:7;stroke-linecap:round;stroke-linejoin:round}
+.sc-loop .lb{position:absolute;inset:0;display:grid;place-items:center;font-weight:800;font-size:14px}
+.sc-hand{position:relative;width:150px;height:130px;display:grid;place-items:center}
+.book{width:110px;height:120px;border-radius:10px 16px 16px 10px;background:#fff;box-shadow:inset 10px 0 0 var(--brand),0 10px 22px -12px rgba(120,70,30,.5);padding:20px 16px 16px 24px;display:grid;gap:9px;align-content:start;animation:bob 3s ease-in-out infinite}
+.book i{height:7px;border-radius:4px;background:var(--line-2)}.book i.s{width:60%}
+.sc-hand .ok{position:absolute;right:4px;bottom:6px;width:40px;height:40px;border-radius:50%;background:#1F7A4D;color:#fff;display:grid;place-items:center;font-weight:800;font-size:20px;animation:okpop 3.6s ease infinite}
+@media (max-width:760px){.jr-c{grid-template-columns:minmax(0,1fr)}.jr-v{min-height:160px}}
+@media (max-width:480px){.jr li{grid-template-columns:40px minmax(0,1fr);gap:12px}.jr-n{width:40px;height:40px;font-size:14px}.jr::before{left:19px}}
 /* Systematic: story + infographic */
 .story{display:grid;grid-template-columns:minmax(0,.9fr) minmax(0,1.1fr);gap:clamp(20px,4vw,48px);align-items:center;margin-top:24px;margin-bottom:22px}
 .story-txt p{margin:0 0 14px;font-size:clamp(16px,1.6vw,18.5px);line-height:1.75;color:var(--ink-2)}
@@ -680,15 +724,36 @@ footer.site{padding-block:clamp(56px,7vw,88px) 40px}
       <figcaption><b><span class="z">AI 报告助手</span><span class="e">AI report assistant</span></b><span><span class="z">一句话交代，AI 先起草，团队审核后发出。</span><span class="e">Ask in one line; AI drafts, the team reviews, then it goes out.</span></span></figcaption></figure>
   </div>
 </div></section>
-<section class="svc-sec" style="padding-top:0"><div class="page"><div class="band butter">
+<section class="svc-sec" style="padding-top:0"><div class="page"><div class="band butter mock-band">
   <div><p class="eyebrow"><span class="z">例子</span><span class="e">Example</span></p><h3><span class="z">Creators Platform：我们自己的 KOC 系统，就是这样做出来的。</span><span class="e">Creators Platform: our own KOC system was built this way.</span></h3>
-    <p><span class="z">从 Excel 开始，一块一块搭成选人、排期、报告都在一起的平台，现在也开放给品牌使用。</span><span class="e">It started as spreadsheets and grew, piece by piece, into one platform for creators, schedules and reports. It is now open to brands too.</span></p></div>
-  <ul><li><a href="https://aboutus.mktg-stories.com/creators-platform/" style="color:inherit"><span class="z">看 Creators Platform →</span><span class="e">See Creators Platform →</span></a></li></ul>
+    <p><span class="z">从 Excel 开始，一块一块搭成选人、排期、报告都在一起的平台，现在也开放给品牌使用。</span><span class="e">It started as spreadsheets and grew, piece by piece, into one platform for creators, schedules and reports. It is now open to brands too.</span></p>
+    <a class="btn btn-brand" style="margin-top:20px" href="https://aboutus.mktg-stories.com/creators-platform/"><span class="z">看 Creators Platform →</span><span class="e">See Creators Platform →</span></a></div>
+  <div class="mock" aria-label="A brand page on Creators Platform (demo)" role="img">
+  <div class="mw-bar"><i></i><i></i><i></i><span class="mw-url">creator-platform.mktg-stories.com/<b>m</b></span></div>
+  <div class="mw-body">
+    <div class="mw-top"><span class="mw-logo"></span><b>Creators Platform · <span class="z">总控台</span><span class="e">Console</span></b><span class="mw-lang">中文 · EN</span></div>
+    <div class="mw-kpis">
+      <div><small><span class="z">曝光</span><span class="e">Impressions</span></small><b>4.97M</b></div><div><small><span class="z">笔记</span><span class="e">Posts</span></small><b>348</b></div>
+      <div><small><span class="z">活动</span><span class="e">Campaigns</span></small><b>13</b></div><div><small><span class="z">平台</span><span class="e">Platform</span></small><b>小红书</b></div>
+    </div>
+    <div class="mw-row">
+      <div class="mw-chart"><small><span class="z">累计曝光</span><span class="e">Cumulative impressions</span></small>
+        <div class="mw-bars"><i style="--h:42%;--i:0"></i><i style="--h:58%;--i:1"></i><i style="--h:50%;--i:2"></i><i style="--h:78%;--i:3"></i><i style="--h:92%;--i:4"></i></div>
+        <div class="mw-x"><span><span class="z">母亲节</span><span class="e">MD</span></span><span><span class="z">父亲节</span><span class="e">FD</span></span><span><span class="z">中秋</span><span class="e">MA</span></span><span><span class="z">圣诞</span><span class="e">XM</span></span><span><span class="z">新年</span><span class="e">CNY</span></span></div></div>
+      <div class="mw-list"><small><span class="z">博主表现排行</span><span class="e">Creator ranking</span></small>
+        <div class="mw-li" style="--i:0"><span class="av a1"></span><span class="ln"></span><b>2.4×</b></div>
+        <div class="mw-li" style="--i:1"><span class="av a2"></span><span class="ln"></span><b>1.9×</b></div>
+        <div class="mw-li" style="--i:2"><span class="av a3"></span><span class="ln"></span><b>1.6×</b></div></div>
+    </div>
+    <div class="mw-foot"><span class="mw-pdf"><span class="z">下载 PDF</span><span class="e">Download PDF</span></span><span class="mw-cursor"></span></div>
+  </div>
+  <p class="mock-note"><span class="z">示范画面 · 数字为我们的公开成绩</span><span class="e">Demo screen · our public numbers</span></p>
+</div>
 </div></div></section>
 <section class="svc-sec"><div class="page">
   <p class="eyebrow"><span class="z">怎么合作</span><span class="e">How we work</span></p>
   <h2 class="h2"><span class="z">四个步骤</span><span class="e">Four steps</span></h2>
-  <ol class="tl4 reveal"><li><span class="tl-n">01</span><div class="tl-c"><b><span class="z">看你现在怎么做</span><span class="e">See how you work today</span></b><p><span class="z">访谈团队，看现有的表格、群组和文件，画出整个流程，找出最花时间、最容易出错的地方。</span><span class="e">We talk to the team, look at the spreadsheets, chats and files you use, map the whole process and find where time goes and mistakes happen.</span></p><div class="outs"><small><span class="z">这一步你会拿到</span><span class="e">You get</span></small><em><span class="z">流程地图</span><span class="e">Process map</span></em><em><span class="z">痛点清单</span><span class="e">Pain points</span></em><em><span class="z">优先顺序</span><span class="e">Priorities</span></em></div></div></li><li><span class="tl-n">02</span><div class="tl-c"><b><span class="z">先做最常用的一块</span><span class="e">Build the most-used part first</span></b><p><span class="z">从每天都会用到的那一块开始，用 AI 协作开发，很快交出能用的第一版，旧资料一起搬进来。</span><span class="e">We start with the part used every day, build it with AI and hand over a usable first version quickly, with your existing data moved in.</span></p><div class="outs"><small><span class="z">这一步你会拿到</span><span class="e">You get</span></small><em><span class="z">可用的第一版</span><span class="e">A working first version</span></em><em><span class="z">资料搬家</span><span class="e">Data moved in</span></em></div></div></li><li><span class="tl-n">03</span><div class="tl-c"><b><span class="z">一起用、一起改</span><span class="e">Use it and refine it</span></b><p><span class="z">团队实际用一段时间，按回馈调整细节，再接上下一块。</span><span class="e">The team uses it for real, we refine it from their feedback, then connect the next piece.</span></p><div class="outs"><small><span class="z">这一步你会拿到</span><span class="e">You get</span></small><em><span class="z">按回馈调整</span><span class="e">Feedback rounds</span></em><em><span class="z">下一块的计划</span><span class="e">Next piece planned</span></em></div></div></li><li><span class="tl-n">04</span><div class="tl-c"><b><span class="z">交接与培训</span><span class="e">Hand over and train</span></b><p><span class="z">写好使用说明、带团队上手，之后继续维护；流程和资料都留在你手上。</span><span class="e">We write the guides, train the team and keep maintaining it; the process and data stay with you.</span></p><div class="outs"><small><span class="z">这一步你会拿到</span><span class="e">You get</span></small><em><span class="z">使用说明</span><span class="e">Guides</span></em><em><span class="z">团队培训</span><span class="e">Training</span></em><em><span class="z">持续维护</span><span class="e">Maintenance</span></em></div></div></li></ol>
+  <ol class="jr"><li class="reveal" style="--d:0ms"><span class="jr-n">01</span><div class="jr-c"><div class="jr-t"><small><span class="z">步骤</span><span class="e">Step</span> 1</small><b><span class="z">看你现在怎么做</span><span class="e">See how you work today</span></b><p><span class="z">访谈团队，看现有的表格、群组和文件，画出整个流程，找出最花时间、最容易出错的地方。</span><span class="e">We talk to the team, look at the spreadsheets, chats and files you use, map the whole process and find where time goes and mistakes happen.</span></p><div class="outs"><small><span class="z">这一步你会拿到</span><span class="e">You get</span></small><em><span class="z">流程地图</span><span class="e">Process map</span></em><em><span class="z">痛点清单</span><span class="e">Pain points</span></em><em><span class="z">优先顺序</span><span class="e">Priorities</span></em></div></div><div class="jr-v v0"><div class="sc"><svg class="sc-map" viewBox="0 0 220 130"><path class="mp" d="M30 35 H110 V95 H190"/><path class="mp m2" d="M110 35 H190 V60"/><rect x="12" y="22" width="36" height="26" rx="8"/><rect x="92" y="22" width="36" height="26" rx="8"/><rect x="172" y="22" width="36" height="26" rx="8" class="hot"/><rect x="92" y="82" width="36" height="26" rx="8"/><rect x="172" y="82" width="36" height="26" rx="8"/><circle cx="190" cy="22" r="7" class="warn"/></svg></div></div></div></li><li class="reveal" style="--d:90ms"><span class="jr-n">02</span><div class="jr-c"><div class="jr-t"><small><span class="z">步骤</span><span class="e">Step</span> 2</small><b><span class="z">先做最常用的一块</span><span class="e">Build the most-used part first</span></b><p><span class="z">从每天都会用到的那一块开始，用 AI 协作开发，很快交出能用的第一版，旧资料一起搬进来。</span><span class="e">We start with the part used every day, build it with AI and hand over a usable first version quickly, with your existing data moved in.</span></p><div class="outs"><small><span class="z">这一步你会拿到</span><span class="e">You get</span></small><em><span class="z">可用的第一版</span><span class="e">A working first version</span></em><em><span class="z">资料搬家</span><span class="e">Data moved in</span></em></div></div><div class="jr-v v1"><div class="sc sc-build"><span class="bk b1"></span><span class="bk b2"></span><span class="bk b3"></span><span class="bk b4"></span></div></div></div></li><li class="reveal" style="--d:180ms"><span class="jr-n">03</span><div class="jr-c"><div class="jr-t"><small><span class="z">步骤</span><span class="e">Step</span> 3</small><b><span class="z">一起用、一起改</span><span class="e">Use it and refine it</span></b><p><span class="z">团队实际用一段时间，按回馈调整细节，再接上下一块。</span><span class="e">The team uses it for real, we refine it from their feedback, then connect the next piece.</span></p><div class="outs"><small><span class="z">这一步你会拿到</span><span class="e">You get</span></small><em><span class="z">按回馈调整</span><span class="e">Feedback rounds</span></em><em><span class="z">下一块的计划</span><span class="e">Next piece planned</span></em></div></div><div class="jr-v v2"><div class="sc sc-loop"><svg viewBox="0 0 120 120"><path class="lp" d="M60 16a44 44 0 1 1-38 22"/><path class="lph" d="M14 30l8 9 10-6"/></svg><span class="lb"><span class="z">回馈</span><span class="e">Feedback</span></span></div></div></div></li><li class="reveal" style="--d:270ms"><span class="jr-n">04</span><div class="jr-c"><div class="jr-t"><small><span class="z">步骤</span><span class="e">Step</span> 4</small><b><span class="z">交接与培训</span><span class="e">Hand over and train</span></b><p><span class="z">写好使用说明、带团队上手，之后继续维护；流程和资料都留在你手上。</span><span class="e">We write the guides, train the team and keep maintaining it; the process and data stay with you.</span></p><div class="outs"><small><span class="z">这一步你会拿到</span><span class="e">You get</span></small><em><span class="z">使用说明</span><span class="e">Guides</span></em><em><span class="z">团队培训</span><span class="e">Training</span></em><em><span class="z">持续维护</span><span class="e">Maintenance</span></em></div></div><div class="jr-v v3"><div class="sc sc-hand"><div class="book"><i></i><i></i><i class="s"></i></div><span class="ok">✓</span></div></div></div></li></ol>
 </div></section>
 <section class="svc-sec get-sec"><div class="page">
   <p class="eyebrow"><span class="z">你会拿到</span><span class="e">What you get</span></p>

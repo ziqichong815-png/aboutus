@@ -330,6 +330,50 @@ footer.site{padding-block:clamp(56px,7vw,88px) 40px}
 @media (max-width:900px){.svc-hero .page,.band{grid-template-columns:minmax(0,1fr)}.steps{grid-template-columns:repeat(2,minmax(0,1fr))}.cards3{grid-template-columns:minmax(0,1fr)}}
 @media (max-width:560px){.steps,.others,.stats3{grid-template-columns:minmax(0,1fr)}}
 
+/* steps as a vertical journey with a moving scene each */
+.jr{list-style:none;margin:30px 0 0;padding:0;display:grid;gap:18px;position:relative}
+.jr::before{content:"";position:absolute;left:27px;top:28px;bottom:28px;width:3px;border-radius:3px;background:linear-gradient(var(--brand),var(--sun),var(--ink))}
+.jr li{display:grid;grid-template-columns:56px minmax(0,1fr);gap:18px;align-items:start;position:relative}
+.jr-n{position:relative;z-index:1;width:56px;height:56px;border-radius:50%;background:var(--brand);color:#fff;display:grid;place-items:center;font-weight:800;font-size:17px;box-shadow:0 0 0 6px var(--bg),var(--sh-1)}
+.jr li:nth-child(2) .jr-n{background:#F7884F}.jr li:nth-child(3) .jr-n{background:#E9A43A}.jr li:nth-child(4) .jr-n{background:var(--ink)}
+.jr-c{background:#fff;border-radius:var(--r-xl);box-shadow:var(--sh-1);display:grid;grid-template-columns:minmax(0,1.3fr) minmax(0,1fr);overflow:hidden}
+.jr-t{padding:clamp(20px,2.6vw,30px);display:grid;gap:8px;align-content:center}
+.jr-t small{font-weight:800;font-size:12px;letter-spacing:.08em;color:var(--brand-ink)}
+.jr-t b{font-size:clamp(19px,2vw,24px);line-height:1.35;letter-spacing:-.01em}
+.jr-t p{margin:0;color:var(--ink-2);font-size:15px;line-height:1.65}
+.jr-v{min-height:190px;display:grid;place-items:center;background:var(--butter)}
+.jr-v.v1{background:var(--mint)}.jr-v.v2{background:var(--peach)}.jr-v.v3{background:var(--sky)}
+.sc{display:grid;place-items:center;width:100%;height:100%;padding:16px}
+.sc-chat{display:grid;gap:8px;align-content:center;max-width:240px}
+.sc-chat p{margin:0;padding:8px 12px;border-radius:14px;font-size:12.5px;font-weight:700;width:max-content;max-width:100%;animation:msg 6s ease infinite}
+.sc-chat .me{justify-self:end;background:var(--brand);color:#fff;border-bottom-right-radius:4px}
+.sc-chat .you{background:#fff;border-bottom-left-radius:4px;animation-delay:1.2s}
+.sc-chat .dots{display:flex;gap:4px;background:#fff;animation-delay:2.4s}.sc-chat .dots i{width:6px;height:6px;border-radius:50%;background:var(--muted);animation:type 1.2s ease-in-out infinite}
+.sc-chat .dots i:nth-child(2){animation-delay:.2s}.sc-chat .dots i:nth-child(3){animation-delay:.4s}
+@keyframes msg{0%,8%{opacity:0;transform:translateY(8px)}16%,90%{opacity:1;transform:none}100%{opacity:0}}
+.sc-pipe{display:flex;gap:8px;align-items:center;justify-content:center}
+.sc-pipe span{background:#fff;border-radius:999px;padding:9px 16px;font-weight:800;font-size:14px;box-shadow:0 6px 14px -10px rgba(120,70,30,.5);animation:lit 4.5s ease infinite;animation-delay:calc(var(--i) * 1.2s)}
+@keyframes lit{0%,5%{background:#fff;color:var(--ink)}12%,30%{background:var(--brand);color:#fff;transform:translateY(-4px)}40%,100%{background:#fff;color:var(--ink);transform:none}}
+.sc-map{width:min(240px,100%);height:auto}
+.sc-map rect{fill:#fff;stroke:var(--ink);stroke-width:2.5}.sc-map rect.hot{fill:var(--peach)}
+.sc-map .mp{fill:none;stroke:var(--brand);stroke-width:3;stroke-dasharray:300;animation:mapd 4.5s ease-in-out infinite}.sc-map .m2{animation-delay:.6s}
+.sc-map .warn{fill:var(--brand);animation:pulse 1.6s ease-in-out infinite;transform-origin:190px 22px}
+@keyframes mapd{0%{stroke-dashoffset:300}45%,85%{stroke-dashoffset:0}100%{stroke-dashoffset:-300}}
+.sc-build{position:relative;width:170px;height:140px}
+.bk{position:absolute;height:30px;border-radius:9px;box-shadow:0 6px 14px -8px rgba(120,70,30,.5);animation:drop 5s cubic-bezier(.3,1.4,.5,1) infinite}
+.b1{left:10px;bottom:0;width:150px;background:var(--brand);animation-delay:0s}.b2{left:20px;bottom:34px;width:90px;background:#fff;animation-delay:.5s}
+.b3{left:114px;bottom:34px;width:46px;background:var(--sun);animation-delay:1s}.b4{left:44px;bottom:68px;width:90px;background:var(--soft-orange);animation-delay:1.5s}
+@keyframes drop{0%,5%{opacity:0;transform:translateY(-40px)}15%,85%{opacity:1;transform:none}100%{opacity:0}}
+.sc-loop{position:relative;width:140px;height:140px}
+.sc-loop svg{width:100%;height:100%;animation:spin 5s linear infinite}
+.sc-loop .lp{fill:none;stroke:var(--brand);stroke-width:7;stroke-linecap:round}.sc-loop .lph{fill:none;stroke:var(--brand);stroke-width:7;stroke-linecap:round;stroke-linejoin:round}
+.sc-loop .lb{position:absolute;inset:0;display:grid;place-items:center;font-weight:800;font-size:14px}
+.sc-hand{position:relative;width:150px;height:130px;display:grid;place-items:center}
+.book{width:110px;height:120px;border-radius:10px 16px 16px 10px;background:#fff;box-shadow:inset 10px 0 0 var(--brand),0 10px 22px -12px rgba(120,70,30,.5);padding:20px 16px 16px 24px;display:grid;gap:9px;align-content:start;animation:bob 3s ease-in-out infinite}
+.book i{height:7px;border-radius:4px;background:var(--line-2)}.book i.s{width:60%}
+.sc-hand .ok{position:absolute;right:4px;bottom:6px;width:40px;height:40px;border-radius:50%;background:#1F7A4D;color:#fff;display:grid;place-items:center;font-weight:800;font-size:20px;animation:okpop 3.6s ease infinite}
+@media (max-width:760px){.jr-c{grid-template-columns:minmax(0,1fr)}.jr-v{min-height:160px}}
+@media (max-width:480px){.jr li{grid-template-columns:40px minmax(0,1fr);gap:12px}.jr-n{width:40px;height:40px;font-size:14px}.jr::before{left:19px}}
 /* Systematic: story + infographic */
 .story{display:grid;grid-template-columns:minmax(0,.9fr) minmax(0,1.1fr);gap:clamp(20px,4vw,48px);align-items:center;margin-top:24px;margin-bottom:22px}
 .story-txt p{margin:0 0 14px;font-size:clamp(16px,1.6vw,18.5px);line-height:1.75;color:var(--ink-2)}
@@ -734,7 +778,7 @@ footer.site{padding-block:clamp(56px,7vw,88px) 40px}
 <section class="svc-sec"><div class="page">
   <p class="eyebrow"><span class="z">怎么合作</span><span class="e">How we work</span></p>
   <h2 class="h2"><span class="z">四个步骤</span><span class="e">Four steps</span></h2>
-  <ol class="tl4 reveal"><li><span class="tl-n">01</span><div class="tl-c"><b><span class="z">预约 Demo</span><span class="e">Book a demo</span></b><p><span class="z">了解你的品牌、产品和一年的档期。</span><span class="e">We learn about your brand, products and the year's calendar.</span></p></div></li><li><span class="tl-n">02</span><div class="tl-c"><b><span class="z">开通你的专属页面</span><span class="e">Open your own page</span></b><p><span class="z">你和团队用自己的密码登录，只看得到自己的资料。</span><span class="e">You and your team log in with your own password and see only your data.</span></p></div></li><li><span class="tl-n">03</span><div class="tl-c"><b><span class="z">每一档<br><span class="pills"><em>Proposal</em><i class="ar">→</i><em>执行</em><i class="ar">→</i><em>结案</em></span></span><span class="e">Each campaign<br><span class="pills"><em>proposal</em><i class="ar">→</i><em>execution</em><i class="ar">→</i><em>close-out</em></span></span></b><p><span class="z">每个阶段都在平台上，进度和数据随时看。</span><span class="e">Every stage is on the platform, with progress and numbers always visible.</span></p></div></li><li><span class="tl-n">04</span><div class="tl-c"><b><span class="z">一年的成果都在一起</span><span class="e">A year of results in one place</span></b><p><span class="z">所有档期的数据累积在同一页，下一年更好排。</span><span class="e">Every campaign's data builds up on one page, so next year is easier to plan.</span></p></div></li></ol>
+  <ol class="jr"><li class="reveal" style="--d:0ms"><span class="jr-n">01</span><div class="jr-c"><div class="jr-t"><small><span class="z">步骤</span><span class="e">Step</span> 1</small><b><span class="z">预约 Demo</span><span class="e">Book a demo</span></b><p><span class="z">了解你的品牌、产品和一年的档期。</span><span class="e">We learn about your brand, products and the year's calendar.</span></p></div><div class="jr-v v0"><div class="sc sc-chat"><p class="me"><span class="z">我们想做中秋活动</span><span class="e">We'd like a Mid-Autumn push</span></p><p class="you"><span class="z">好！先聊聊你的产品和档期</span><span class="e">Great, tell us about your products and dates</span></p><p class="dots"><i></i><i></i><i></i></p></div></div></div></li><li class="reveal" style="--d:90ms"><span class="jr-n">02</span><div class="jr-c"><div class="jr-t"><small><span class="z">步骤</span><span class="e">Step</span> 2</small><b><span class="z">开通你的专属页面</span><span class="e">Open your own page</span></b><p><span class="z">你和团队用自己的密码登录，只看得到自己的资料。</span><span class="e">You and your team log in with your own password and see only your data.</span></p></div><div class="jr-v v1"><div class="sc"><div class="mk mk-web"><div class="tb"><s></s><s></s><s></s><span></span></div><div class="lkw"><span class="lk"></span><i></i><i class="s"></i></div></div></div></div></div></li><li class="reveal" style="--d:180ms"><span class="jr-n">03</span><div class="jr-c"><div class="jr-t"><small><span class="z">步骤</span><span class="e">Step</span> 3</small><b><span class="z">每一档<br><span class="pills"><em>Proposal</em><i class="ar">→</i><em>执行</em><i class="ar">→</i><em>结案</em></span></span><span class="e">Each campaign<br><span class="pills"><em>proposal</em><i class="ar">→</i><em>execution</em><i class="ar">→</i><em>close-out</em></span></span></b><p><span class="z">每个阶段都在平台上，进度和数据随时看。</span><span class="e">Every stage is on the platform, with progress and numbers always visible.</span></p></div><div class="jr-v v2"><div class="sc sc-pipe"><span style="--i:0"><span class="z">计划</span><span class="e">Plan</span></span><span style="--i:1"><span class="z">执行</span><span class="e">Run</span></span><span style="--i:2"><span class="z">结案</span><span class="e">Close</span></span></div></div></div></li><li class="reveal" style="--d:270ms"><span class="jr-n">04</span><div class="jr-c"><div class="jr-t"><small><span class="z">步骤</span><span class="e">Step</span> 4</small><b><span class="z">一年的成果都在一起</span><span class="e">A year of results in one place</span></b><p><span class="z">所有档期的数据累积在同一页，下一年更好排。</span><span class="e">Every campaign's data builds up on one page, so next year is easier to plan.</span></p></div><div class="jr-v v3"><div class="sc"><div class="mk mk-rep"><b><span class="z">全年成果</span><span class="e">The year</span></b><small><span class="z">每一档累积在一起</span><span class="e">every campaign, together</span></small><div class="bars"><i style="--h:35%;--i:0"></i><i style="--h:48%;--i:1"></i><i style="--h:60%;--i:2"></i><i style="--h:72%;--i:3"></i><i style="--h:95%;--i:4"></i></div></div></div></div></div></li></ol>
 </div></section>
 <section class="svc-sec get-sec"><div class="page">
   <p class="eyebrow"><span class="z">你会拿到</span><span class="e">What you get</span></p>
