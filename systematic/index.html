@@ -269,6 +269,12 @@ footer.site{padding-block:clamp(56px,7vw,88px) 40px}
 @media (max-width:760px){.contact{grid-template-columns:1fr}}
 
 /* service landing pages */
+.cases{display:grid;grid-auto-flow:column;grid-auto-columns:minmax(160px,210px);gap:14px;overflow-x:auto;padding:6px 2px 14px;margin-top:22px;scroll-snap-type:x mandatory}
+.case{margin:0;scroll-snap-align:start;display:grid;gap:8px}
+.case img{width:100%;height:auto;aspect-ratio:3/4;object-fit:cover;border-radius:18px;box-shadow:var(--sh-1);display:block;background:var(--peach)}
+.case:nth-child(even){transform:translateY(16px)}
+.case figcaption{font-size:12.5px;font-weight:700;color:var(--muted)}
+.cases-sec{padding-top:0}
 .crumbs{font-size:13.5px;font-weight:700;color:var(--muted);display:flex;gap:8px;flex-wrap:wrap;align-items:center}
 .crumbs a{color:var(--brand-ink);text-decoration:none}
 .svc-hero{padding-block:clamp(36px,6vw,80px) clamp(28px,5vw,64px)}
@@ -339,7 +345,7 @@ footer.site{padding-block:clamp(56px,7vw,88px) 40px}
     <p class="eyebrow" style="margin-top:18px"><span class="z">服务</span><span class="e">Service</span> 02 · Systematic</p>
     <h1><span class="z">把靠人记、靠表格的运营，<br>变成会累积数据的系统。</span><span class="e">Turn operations that live in heads and spreadsheets<br>into a system that keeps its data.</span></h1>
     <p class="lead"><span class="z">我们照你现有的流程搭系统，不硬套现成软件。用 AI 协作开发，很快就有能用的第一版，再边用边改。</span><span class="e">We build around the way you already work instead of forcing an off-the-shelf tool. Built with AI, a usable first version arrives quickly and improves as you use it.</span></p>
-    <div class="svc-chips"><span>Notion</span><span>Google Sheets</span><span><span class="z">看板</span><span class="e">Dashboards</span></span><span><span class="z">AI 工作流</span><span class="e">AI workflows</span></span><span>Vibe Coding</span></div>
+    <div class="svc-chips"><span><span class="z">内容运营</span><span class="e">Content ops</span></span><span><span class="z">数据看板</span><span class="e">Dashboards</span></span><span><span class="z">客户管理</span><span class="e">Client management</span></span><span><span class="z">AI 工作流</span><span class="e">AI workflows</span></span><span>Vibe Coding</span></div>
     <div class="acts"><a class="btn btn-brand" href="#demo"><span class="z">预约 Demo</span><span class="e">Book a demo</span></a>
       <a class="btn btn-white" href="https://aboutus.mktg-stories.com/#services"><span class="z">看所有服务</span><span class="e">All services</span></a></div>
   </div>
@@ -405,7 +411,7 @@ footer.site{padding-block:clamp(56px,7vw,88px) 40px}
 <section class="svc-sec"><div class="page">
   <p class="eyebrow"><span class="z">常见问题</span><span class="e">FAQ</span></p>
   <h2 class="h2"><span class="z">你可能想问</span><span class="e">You might be wondering</span></h2>
-  <div class="faq"><details><summary><span class="z">要换掉现在用的工具吗？</span><span class="e">Do we have to replace our current tools?</span></summary><p><span class="z">不一定。可以接上你已经在用的 Notion、Google Sheets 等，只补上缺的那一块。</span><span class="e">Not necessarily. We can connect the Notion, Google Sheets and other tools you already use and fill only the gaps.</span></p></details><details><summary><span class="z">我们没有技术团队可以吗？</span><span class="e">We have no tech team. Is that a problem?</span></summary><p><span class="z">可以。系统由我们搭建和维护，你的团队只需要会用。</span><span class="e">No. We build and maintain the system; your team only needs to use it.</span></p></details><details><summary><span class="z">资料放在哪里？</span><span class="e">Where does the data live?</span></summary><p><span class="z">可以放在你自己的帐号里，例如 Notion 或 Google Drive，不会被锁在我们这边。</span><span class="e">It can live in your own accounts, such as Notion or Google Drive, so it is never locked in with us.</span></p></details></div>
+  <div class="faq"><details><summary><span class="z">要换掉现在用的工具吗？</span><span class="e">Do we have to replace our current tools?</span></summary><p><span class="z">不一定。可以接上你已经在用的工具，例如 Google Sheets，只补上缺的那一块。</span><span class="e">Not necessarily. We can connect the tools you already use, such as Google Sheets, and fill only the gaps.</span></p></details><details><summary><span class="z">我们没有技术团队可以吗？</span><span class="e">We have no tech team. Is that a problem?</span></summary><p><span class="z">可以。系统由我们搭建和维护，你的团队只需要会用。</span><span class="e">No. We build and maintain the system; your team only needs to use it.</span></p></details><details><summary><span class="z">资料放在哪里？</span><span class="e">Where does the data live?</span></summary><p><span class="z">可以放在你自己的帐号里，例如 Google Drive，不会被锁在我们这边。</span><span class="e">It can live in your own accounts, such as Google Drive, so it is never locked in with us.</span></p></details></div>
 </div></section>
 <section class="svc-sec" id="demo"><div class="page"><div class="svc-cta">
   <p class="eyebrow"><span class="z">预约 Demo</span><span class="e">Book a demo</span></p>
